@@ -1,0 +1,91 @@
+@import "./arrows";
+
+.section-highlight {
+  @include padding();
+
+  width: 100%;
+  height: fit-content;
+}
+
+.section-highlight .swiper-container-highlight {
+  @include SwiperHighlight;
+
+  position: relative;  
+}
+
+.section-highlight .swiper-container {
+  @media screen and (min-width: 500px) {
+    margin: 0 60px;
+  }
+}
+
+.section-highlight h2 {
+  @include title();
+}
+
+.section-highlight p {
+  text-align: center;
+  color: var(--cor-azul-escuro);
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.section-highlight .divider {
+  @include divider(var(--cor-azul-escuro));
+
+  @media screen and (max-width: 500px) {
+    //Os controles do slider subirão quando a largura for até 500px
+    //Preciso dar uma área de respiro melhor para os controles
+    margin-bottom: 100px;
+  }
+}
+
+.section-highlight .swiper-slide {
+  @include backgroundCover();
+
+  border: 2px solid var(--cor-azul-escuro);
+  color: #fff;
+  height: 500px; 
+  border-radius: 16px;
+  position: relative;
+}
+
+.section-highlight .swiper-slide .filter-green,
+.section-highlight .swiper-slide .label {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all ease-in-out 0.4s;
+}
+
+.section-highlight .swiper-slide .filter-green {
+  background-color: rgba($color: #008b6f, $alpha: 0.75);
+  border-radius: 14px;
+  opacity: 0;
+}
+
+.section-highlight .swiper-slide .label {
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px;
+  justify-content: flex-end;
+
+  h4 {
+    font-size: 26px;
+    font-weight: bold;
+    z-index: 3;
+  }
+}
+
+.section-highlight .swiper-slide:hover {
+  .label h4 {
+    color: var(--cor-verde-claro);
+  }
+
+  .filter-green {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,46 @@
+@import "./arrows";
+
+.section-gallery {
+  @include padding();
+  width: 100%;
+  height: fit-content;
+}
+
+.section-gallery .swiper-container-gallery {
+  @include SwiperHighlight;
+  position: relative;
+}
+
+.section-gallery .swiper-container {
+  @media screen and (min-width: 500px) {
+    margin: 0 60px;
+  }
+}
+
+.section-gallery h2 {
+  @include title();
+}
+
+.section-gallery p {
+  text-align: center;
+  color: var(--cor-azul-escuro);
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.section-gallery .divider {
+  @include divider(var(--cor-azul-escuro));
+
+  @media screen and (max-width: 500px) {
+    //Os controles do slider subirão quando a largura for até 500px
+    //Preciso dar uma área de respiro melhor para os controles
+    margin-bottom: 100px;
+  }
+}
+
+.swiper-container-gallery .swiper-slide {
+  width: 100%;
+  min-height: 350px;
+  @include backgroundCover();
+}

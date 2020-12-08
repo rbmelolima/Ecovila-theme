@@ -1,0 +1,24 @@
+#page-home .brands {
+  background-color: var(--cor-azul-escuro);
+  @include padding();
+}
+
+#page-home .brands h2 {
+  @include title();
+} 
+
+#page-home .brands .divider {
+  @include divider(var(--cor-amarelo));
+  margin-bottom: 80px;
+}
+
+#page-home .brands .brands-container img {
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+  height: auto;
+}
+
+#page-home .brands .brands-container .swiper-slide {
+  text-align: center;
+}

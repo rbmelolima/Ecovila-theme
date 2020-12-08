@@ -1,0 +1,62 @@
+#contact-absolute {
+  position: fixed;
+  bottom: 20px;
+  right: 3em;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#contact-absolute a {
+  background-color: #fff;
+  border: 1px solid #f0f0f0;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#contact-absolute a img {
+  height: 25px;
+  width: 25px;
+}
+
+#contact-absolute a.contact-whatsapp {
+  border: 1px solid var(--cor-verde-whatsapp);
+  background-color: var(--cor-verde-whatsapp);
+}
+
+#contact-absolute a.contact-phone {
+  width: 40px;
+  height: 40px;
+
+  img {
+    height: 15px;
+    width: 15px;
+  }
+}
+
+#contact-absolute #phone-fixed-tel {
+  color: #fff;
+  background-color: transparent;
+  text-shadow: black 0px 0px 5px;
+  position: fixed;
+  bottom: 180px;
+  right: 7em;
+  z-index: 2;
+  display: block;
+  opacity: 0;
+  transition: all 0.5s linear;
+  pointer-events: none;
+}
+
+#wrapper-contact-tel:hover {
+  #phone-fixed-tel {
+    opacity: 1;
+  }
+}

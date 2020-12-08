@@ -1,0 +1,46 @@
+section.cta {
+  @include padding();
+
+  display: flex;
+  height: 100%;
+}
+
+section.cta .primary-box {
+  border: 8px solid var(--cor-verde-escuro);
+  background-color: transparent;
+  padding: 16px;
+  width: 100%;
+}
+
+section.cta .second-box {
+  width: 100%;
+  min-height: 400px;
+  padding: 32px 8px;
+  background-color: var(--cor-azul-escuro);
+  color: var(--cor-amarelo);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 16px;
+  }
+
+  h6 {
+    font-weight: bold;
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+
+  a {
+    @include linkDefaultStyle();   
+     
+    border: 1px solid transparent;
+    background-color: var(--cor-verde-claro);
+    color: var(--cor-azul-escuro);
+  }
+}

@@ -1,0 +1,25 @@
+footer.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 24px 16px;
+  color: #fff;
+  background-color: var(--cor-verde-escuro);
+
+  strong {
+    color: var(--cor-amarelo);
+  }
+
+  p {
+    margin-bottom: 0;
+  }  
+
+  @media screen and (min-width: $breakpoint-notebook) {
+    padding: 24px 32px;
+  }
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    padding: 24px 64px;
+  }
+}

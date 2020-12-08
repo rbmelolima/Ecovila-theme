@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+  <meta name="author" content="@rbmelolima">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link rel="shortcut icon" href="" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./libs/font-awesome/css/all.min.css" rel="preload" />
+  <link rel="stylesheet" href="./libs/swiper/swiper.min.css" rel="preload" />
+  <link rel="stylesheet" href="./styles/css/style.css" rel="preload">
+  <title>Ecovila</title>
+
+</head>
+
+<body id="page-contact">
+  <nav id="menu-container">
+    <div id="menu-button-toggle" onclick="toggleMenu()">
+      <i class="fas fa-bars" id="menu-button-icon"></i>
+    </div>
+
+    <div>
+      <a class="header-logo-link" href="" title="Início">
+        <img src="./assets/logo/logo.png" alt="Ecovila Logo" />
+      </a>
+    </div>
+
+    <div>
+      <div class="social-links">
+        <a href="" target="_blank" rel="noopener" title="Facebook"> <i class="fab fa-facebook-f"></i></a>
+        <a href="" target="_blank" rel="noopener" title="Instagram"> <i class="fab fa-instagram"></i></a>
+        <a href="" target="_blank" rel="noopener" title="Linkedin"> <i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <div id="menu-container-overlay">
+      <div class="wrapper">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Ecovila Resort Residencial</a></li>
+          <li><a href="">Casa Eficiente</a></li>
+          <li><a href="">Casas</a></li>
+          <li><a href="">Serviços</a></li>
+          <li><a href="">Blog</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="contact-absolute">
+    <div id="wrapper-contact-tel">
+      <span id="phone-fixed-tel">(13) 988282873</span>
+      <a href="tel:13988282873" class="contact-phone" title="Telefone">
+        <img src="./assets/icons/phone.svg" />
+      </a>
+    </div>
+
+    <div>
+      <a href="mail:" target="_blank" rel="noopener" class="contact-google" title="Email">
+        <img src="./assets/icons/googleLogo.svg" />
+      </a>
+    </div>
+
+    <div>
+      <a href="https://api.whatsapp.com/send?phone=5513988282873" class="contact-whatsapp" title="Whatsapp">
+        <img src="./assets/icons/whatsapp.svg" />
+      </a>
+    </div>
+  </div>
+  <main>
+    <div class="cover"
+      style="background-image: url(https://images.unsplash.com/photo-1604756408398-b98fac699838?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);">
+      <div class="overlay">
+        <h1>Entre em contato</h1>
+      </div>
+    </div>
+
+    <section class="channels">
+      <h2>Contate-nos, estamos ansiosos para conversar com você!</h2>
+      <div class="divider"></div>
+
+      <div class="channels-container">
+        <article>
+          <img src="./assets/icons/meeting-point.png" alt="">
+          <h3>Onde estamos</h3>
+          <p>Av. Ubirajara Keutenedjian, 202 - Nova Mirim, Praia Grande - SP, 11705-065</p>
+        </article>
+
+        <article>
+          <img src="./assets/icons/email.png" alt="">
+          <h3>Email</h3>
+          <p>contato@ecovila.com.br</p>
+        </article>
+
+        <article>
+          <img src="./assets/icons/smartphone.png" alt="">
+          <h3>Telefone</h3>
+          <p>+55 13 3471-8544</p>
+          <p>+55 13 97403-0652</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="form-contact">
+      <h2>Escreva-nos!</h2>
+      <div class="divider"></div>
+
+      <form action="" method="POST" autocomplete="on" class="contact-form">
+        <div class="input-block-col-3">
+          <div class="input-block">
+            <label for="USER_NAME">Nome</label>
+            <input type="text" name="USER_NAME" id="" placeholder="Nome completo">
+          </div>
+
+          <div class="input-block">
+            <label for="USER_EMAIL">Email</label>
+            <input type="email" name="USER_EMAIL" id="" placeholder="email@exemplo.com">
+          </div>
+
+          <div class="input-block">
+            <label for="USER_TEL">Telefone</label>
+            <input type="tel" name="USER_TEL" id="" placeholder="99 999999999 ">
+          </div>
+        </div>
+
+        <div class="input-block-col-3">
+          <div class="input-block">
+            <label for="USER_CONTACT_FORM">Como prefere ser contatado? </label>
+            <select name="USER_CONTACT_FORM" id="">
+              <option value="-1" selected disabled>Selecione uma opção</option>
+              <option value="">Email</option>
+              <option value="">Telefone</option>
+            </select>
+          </div>
+
+          <div class="input-block">
+            <label for="QUESTION">Como nos conheceu?</label>
+            <select name="QUESTION" id="">
+              <option value="-1" selected disabled>Selecione uma opção</option>
+              <option value="">Google</option>
+              <option value="">Facebook</option>
+            </select>
+          </div>
+
+          <div class="input-block">
+            <label for="SUBJECT">Assunto</label>
+            <input type="text" name="SUBJECT" id="" placeholder="Ex.: Orçamento">
+          </div>
+        </div>
+
+        <div class="input-block">
+          <label for="MESSAGE">Mensagem</label>
+          <input type="text" name="MESSAGE" placeholder="Escreva aqui sua mensagem...">
+        </div>
+
+        <button type="submit">
+          Enviar
+          <i class="fas fa-long-arrow-alt-right"></i>
+        </button>
+      </form>
+    </section>
+
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3643.963538726037!2d-46.4959301844894!3d-24.03235088503985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce1fa0b7f16a97%3A0x14a4ab255ea7411e!2sResidencial%20EcoVila!5e0!3m2!1spt-BR!2sbr!4v1604607756740!5m2!1spt-BR!2sbr"
+      height="450" frameborder="0" width="100%" allowfullscreen="" aria-hidden="false" tabindex="0">
+    </iframe>
+
+    <section class="section-highlight">
+      <h2>As Casas</h2>
+      <p>
+        Projetos que proporcionam qualidade de vida com sustentabilidade e conforto. São 4 modelos diferentes. Um deles
+        na medida certa para você e toda sua família.
+      </p>
+
+      <div class="divider"></div>
+
+      <!-- Slider main container with id -->
+      <div class="swiper-container-highlight">
+        <!-- Slider main container -->
+        <div class="swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"
+              style="background-image: url(https://images.unsplash.com/photo-1542475025-12b507d2d4a6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80);">
+              <div class="filter-green"></div>
+              <div class="label">
+                <h4>Casa 1</h4>
+              </div>
+            </div>
+            <div class="swiper-slide"
+              style="background-image: url(https://images.unsplash.com/photo-1503917815533-9c9825d186a6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);">
+              <div class="filter-green"></div>
+              <div class="label">
+                <h4>Casa 2</h4>
+              </div>
+            </div>
+            <div class="swiper-slide"
+              style="background-image: url(https://images.unsplash.com/photo-1542475025-12b507d2d4a6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80);">
+              <div class="filter-green"></div>
+              <div class="label">
+                <h4>Casa 3</h4>
+              </div>
+            </div>
+            <div class="swiper-slide"
+              style="background-image: url(https://images.unsplash.com/photo-1503917815533-9c9825d186a6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);">
+              <div class="filter-green"></div>
+              <div class="label">
+                <h4>Casa 4</h4>
+              </div>
+            </div>
+          </div>
+          <!-- navigation buttons -->
+          <div class="swiper-button-prev"><i class="fas fa-long-arrow-alt-left"></i></div>
+          <div class="swiper-button-next"><i class="fas fa-long-arrow-alt-right"></i></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-highlight">
+      <h2>Serviços oferecidos no Condomínio</h2>
+      <p> Um conceito de moradia que se preocupa com a qualidade de vida do Planeta </p>
+      <div class="divider"></div>
+
+      <!-- Slider main container with id -->
+      <div class="swiper-container-highlight">
+        <!-- Slider main container -->
+        <div class="swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"
+              style="background-image: url(https://images.unsplash.com/photo-1542475025-12b507d2d4a6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80);">
+              <div class="filter-green"></div>
+              <div class="label">
+                <h4>Serviço 1</h4>
+              </div>
+            </div>
+            <div class="swiper-slide"
+              style="background-image: url(https://images.unsplash.com/photo-1503917815533-9c9825d186a6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);">
+              <div class="filter-green"></div>
+              <div class="label">
+                <h4>Serviço 2</h4>
+              </div>
+            </div>
+            <div class="swiper-slide"
+              style="background-image: url(https://images.unsplash.com/photo-1542475025-12b507d2d4a6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80);">
+              <div class="filter-green"></div>
+              <div class="label">
+                <h4>Serviço 3</h4>
+              </div>
+            </div>
+            <div class="swiper-slide"
+              style="background-image: url(https://images.unsplash.com/photo-1503917815533-9c9825d186a6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);">
+              <div class="filter-green"></div>
+              <div class="label">
+                <h4>Serviço 4</h4>
+              </div>
+            </div>
+          </div>
+
+          <!-- navigation buttons -->
+          <div class="swiper-button-prev"><i class="fas fa-long-arrow-alt-left"></i></div>
+          <div class="swiper-button-next"><i class="fas fa-long-arrow-alt-right"></i></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <div id="sitemap">
+    <div class="section-sitemap logo">
+      <img src="./assets/logo/logo.png" alt="Ecovila Logo">
+    </div>
+
+    <div class="section-sitemap pages">
+      <nav>
+        <a href="index.html" title="">Início</a>
+        <a href="sobre.html" title="">Ecovila Resort Residencial</a>
+        <a href="http://" title="">Blog</a>
+        <a href="contato.html" title="">Contato</a>
+      </nav>
+    </div>
+
+    <div class="section-sitemap houses">
+      <a href="http://" title="">Casa Eficiente</a>
+      <a href="http://" title="">Tecnologia</a>
+      <a href="http://" title="">2 suítes gar. p/ 2 carros</a>
+      <a href="http://" title="">2 suítes gar. p/ 3 carros</a>
+      <a href="http://" title="">2 suítes gar. p/ 4 carros</a>
+      <a href="http://" title="">2 suítes gar. p/ 5 carros</a>
+    </div>
+
+    <div class="section-sitemap services">
+      <nav>
+        <a href="http://" title=""> Serviço </a>
+        <a href="http://" title=""> Serviço </a>
+        <a href="http://" title=""> Serviço </a>
+        <a href="http://" title=""> Serviço </a>
+        <a href="http://" title=""> Serviço </a>
+      </nav>
+    </div>
+
+    <div class="section-sitemap contact">
+      <span>
+        <div class="icon">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        Avenida Ubirajara Keutenedjian, no. 202 - Vila Mirim - Praia Grande - SP
+      </span>
+      <span>
+        <div class="icon">
+          <i class="fas fa-phone"></i>
+        </div>
+        13 3471-8544
+      </span>
+      <span>
+        <div class="icon">
+          <i class="fas fa-mobile"></i>
+        </div>
+        13 97403-0652
+      </span>
+      <span>
+        <div class="icon">
+          <i class="fas fa-envelope"></i>
+        </div>
+        contato@ecovilaresortresidencial.com.br
+      </span>
+      <div class="social-media">
+        <a href="" target="_blank" rel="noopener" title="Facebook"> <i class="fab fa-facebook-f"></i></a>
+        <a href="" target="_blank" rel="noopener" title="Instagram"> <i class="fab fa-instagram"></i></a>
+        <a href="" target="_blank" rel="noopener" title="Linkedin"> <i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>© 2020 <strong>Ecovila Resort Residencial</strong> - Todos os direitos reservados</p>
+  </footer>
+
+  <script src="./libs/jquery/jquery-3.4.1.js" rel="preload"></script>
+  <script src="./libs/jquery/jquery.mask.min.js" rel="preload"></script>
+  <script src="./libs/swiper/swiper.min.js" rel="preload"></script>
+  <script src="./js/index.js" rel="preload"></script>
+  <script src="./js/sliders.js" rel="preload"></script>
+</body>
+
+</html>

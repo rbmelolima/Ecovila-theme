@@ -1,0 +1,41 @@
+:root {
+  --cor-verde-claro: #b2dc16;
+  --cor-verde-escuro: #008b6f;
+  --cor-verde-whatsapp: #00bfa5;
+  --cor-azul-escuro: #004358;
+  --cor-laranja: #fd7400;
+  --cor-amarelo: #ffe11a;
+}
+
+$breakpoint-desktop: 1200px;
+$breakpoint-notebook: 1024px;
+$breakpoint-tablet: 740px;
+$breakpoint-mobile: 450px;
+
+$padding-section-desktop: 100px 64px;
+$padding-section-notebook: 80px 32px;
+$padding-section-mobile: 60px 16px;
+
+*,
+button,
+input {
+  font-family: "Raleway", sans-serif;
+}
+
+a,
+button {
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+a {
+  font-weight: bold;
+}
+
+body {
+  line-height: 1.6;
+}
+
+.no-scroll {
+  overflow: hidden;
+}

@@ -1,0 +1,55 @@
+#page-about .ctas {
+  display: flex;
+  width: 100%;
+}
+
+#page-about .ctas a {
+  @include linkDefaultStyle();
+  
+  font-weight: bold;
+  border: 1px solid transparent;
+
+  i {
+    margin-left: 24px;
+  }
+
+  @media screen and (max-width: $breakpoint-notebook) {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+}
+
+#page-about .ctas .wrapper {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: space-between;
+  padding: 0 48px;
+
+  @media screen and (max-width: $breakpoint-notebook) {
+    flex-direction: column;
+    max-width: 100%;
+    padding: 0 32px;
+  }
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    padding: 0 16px;
+  }
+}
+
+#page-about .ctas a:first-child {
+  background-color: var(--cor-verde-claro);
+  color: var(--cor-azul-escuro);
+}
+
+#page-about .ctas a:nth-child(2) {
+  background-color: var(--cor-azul-escuro);
+  color: var(--cor-verde-claro);
+}
+
+#page-about .ctas a:last-child {
+  color: var(--cor-azul-escuro);
+  background-color: transparent;
+  border-color: var(--cor-azul-escuro);
+}

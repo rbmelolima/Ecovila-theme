@@ -1,0 +1,96 @@
+#page-home .architect {
+  display: grid;
+
+  @media screen and (min-width: $breakpoint-notebook) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+#page-home .architect .container-background {
+  position: relative;
+}
+
+#page-home .architect .container-background .image,
+#page-home .architect .container-background .filter-blue {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#page-home .architect .container-background,
+#page-home .architect .container-background .image,
+#page-home .architect .container-background .filter-blue,
+#page-home .architect .container-background .filter-blue .content {
+  width: 100%;
+  min-height: 800px;
+  height: 100%;
+}
+
+#page-home .architect .container-background .image {
+  z-index: 1;
+  background-image: url("../../../assets/images/arquiteta.png");
+  @include backgroundCover();
+}
+
+#page-home .architect .container-background .filter-blue {
+  z-index: 2;
+  background-color: rgba(0, 67, 88, 0.6);
+}
+
+#page-home .architect .container-background .filter-blue h1 {
+  font-size: 72px;
+  font-weight: 800;
+  color: #fff;
+}
+
+#page-home .architect .container-background .filter-blue .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#page-home .architect .container-text {
+  background-color: var(--cor-azul-escuro);
+  padding: 64px;
+
+  display: flex;
+  align-items: center;
+}
+
+#page-home .architect .container-text h2 {
+  color: var(--cor-verde-claro);
+  font-size: 32px;  
+}
+
+#page-home .architect .container-text .divider {
+  @include divider(var(--cor-amarelo));
+  margin: 16px 0 40px 0;  
+}
+
+#page-home .architect .container-text cite {
+  font-weight: lighter;
+  font-size: 32px;
+  color: #fff;
+}
+
+@media screen and (max-width: 700px) {
+  #page-home .architect .container-background,
+  #page-home .architect .container-background .image,
+  #page-home .architect .container-background .filter-blue,
+  #page-home .architect .container-background .filter-blue .content {
+    min-height: 400px;
+  }
+
+  #page-home .architect .container-background .filter-blue h1 {
+    font-size: 36px;
+  }
+
+  #page-home .architect .container-text {
+    padding: 64px 16px;   
+  }
+
+  #page-home .architect .container-text cite {    
+    font-size: 24px;    
+  }
+}
