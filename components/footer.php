@@ -1,6 +1,6 @@
 <div id="sitemap">
   <div class="section-sitemap logo">
-    <img src="./assets/logo/logo.png" alt="Ecovila Logo">
+    <?php the_custom_logo(); ?>
   </div>
 
   <div class="section-sitemap pages">
@@ -36,36 +36,36 @@
       <div class="icon">
         <i class="fas fa-map-marker-alt"></i>
       </div>
-      Avenida Ubirajara Keutenedjian, no. 202 - Vila Mirim - Praia Grande - SP
+      <?= $ENDERECO ?>
     </span>
     <span>
       <div class="icon">
         <i class="fas fa-phone"></i>
       </div>
-      13 3471-8544
+      <?= $TELEFONE ?>
     </span>
     <span>
       <div class="icon">
         <i class="fas fa-mobile"></i>
       </div>
-      13 97403-0652
+      <?= $WHATSAPP ?>
     </span>
     <span>
       <div class="icon">
         <i class="fas fa-envelope"></i>
       </div>
-      contato@ecovilaresortresidencial.com.br
+      <?= $EMAIL ?>
     </span>
     <div class="social-media">
-      <a href="" target="_blank" rel="noopener" title="Facebook"> <i class="fab fa-facebook-f"></i></a>
-      <a href="" target="_blank" rel="noopener" title="Instagram"> <i class="fab fa-instagram"></i></a>
-      <a href="" target="_blank" rel="noopener" title="Linkedin"> <i class="fab fa-linkedin-in"></i></a>
+      <a href="<?= $FACEBOOK ?>" target="_blank" rel="noopener" title="Facebook"> <i class="fab fa-facebook-f"></i></a>
+      <a href="<?= $INSTAGRAM ?>" target="_blank" rel="noopener" title="Instagram"> <i class="fab fa-instagram"></i></a>
+      <a href="<?= $LINKEDIN ?>" target="_blank" rel="noopener" title="Linkedin"> <i class="fab fa-linkedin-in"></i></a>
     </div>
   </div>
 </div>
 
 <footer class="footer">
-  <p>© 2020 <strong>Ecovila Resort Residencial</strong> - Todos os direitos reservados</p>
+  <p>© <?= date('Y') ?> <strong>Ecovila Resort Residencial</strong> - Todos os direitos reservados</p>
 </footer>
 
 <script src="<?php bloginfo('template_url'); ?>/libs/jquery/jquery-3.4.1.js" rel="preload"></script>

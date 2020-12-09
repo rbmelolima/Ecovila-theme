@@ -16,3 +16,29 @@
   <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/styles/css/style.css" rel="preload">
   <title><?php bloginfo('name'); ?></title>
 </head>
+
+<?php
+$FACEBOOK;
+$INSTAGRAM;
+$LINKEDIN;
+$WHATSAPP;
+$TELEFONE;
+$EMAIL;
+$ENDERECO;
+
+$loop = new WP_Query(array(
+  'post_type' => 'information',
+  'posts_per_page' => 1,
+  'order' => 'ASC',
+));
+while ($loop->have_posts()) :  $loop->the_post();
+  $FACEBOOK = get_field('facebook');
+  $INSTAGRAM = get_field('instagram');
+  $LINKEDIN = get_field('linkedin');
+  $WHATSAPP = get_field('whatsapp');
+  $TELEFONE = get_field('telefone');
+  $EMAIL = get_field('email');
+  $ENDERECO = get_field('endereco');
+endwhile;
+wp_reset_query();
+?>
