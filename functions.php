@@ -1,6 +1,6 @@
 <?php
 //Menus dinâmicos
-function ecovila_register_my_menus()
+function ecovila_register_menus()
 {
   register_nav_menus(
     array(
@@ -36,8 +36,8 @@ function ecovila_add_resources()
   add_theme_support('post-thumbnails');
 }
 
-//Sliders: Banner
-function ecovila_register_slider_banner()
+//Banner
+function ecovila_register_banner()
 {
   register_post_type(
     'slider_banner',
@@ -76,6 +76,26 @@ function ecovila_register_testimony()
   );
 }
 
+//Parceiros
+function ecovila_register_partners()
+{
+  register_post_type(
+    'slider_partners',
+    array(
+      'labels' => array(
+        'name' => __('Parceiros'),
+        'singular_name' => __('Parceiro'),
+        'add_new' => __('Novo parceiro'),
+      ),
+
+      'public' => true,
+      'has_archive' => false,
+      'menu_icon' => 'dashicons-images-alt',
+      'supports' => array('title', 'page-attributes'),
+    )
+  );
+}
+
 
 // Customizar o Footer do WordPress
 function ecovila_custom_footer_admin()
@@ -93,10 +113,11 @@ function ecovila_change_logo_class($html)
 
 //Registrando as funções
 add_action('init', 'ecovila_add_resources');
-add_action('init', 'ecovila_register_slider_banner');
+add_action('init', 'ecovila_register_banner');
 add_action('init', 'ecovila_register_testimony');
-add_action('init', 'ecovila_register_my_menus');
+add_action('init', 'ecovila_register_menus');
 add_action('init', 'ecovila_register_information');
+add_action('init', 'ecovila_register_partners');
 add_filter('admin_footer_text', 'ecovila_custom_footer_admin');
 add_filter('get_custom_logo', 'ecovila_change_logo_class');
 

@@ -4,6 +4,7 @@
   <?php require_once 'components/menu.php'; ?>
   <?php require_once 'components/sliders/banner.php'; ?>
   <?php require_once 'components/sliders/depoimentos.php'; ?>
+  <?php require_once 'components/sliders/parceiros.php'; ?>
 
 </body>
 
