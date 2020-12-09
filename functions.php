@@ -37,7 +37,7 @@ function ecovila_add_resources()
 }
 
 //Sliders: Banner
-function register_slider_banner()
+function ecovila_register_slider_banner()
 {
   register_post_type(
     'slider_banner',
@@ -56,6 +56,26 @@ function register_slider_banner()
   );
 }
 
+//Depoimentos
+function ecovila_register_testimony()
+{
+  register_post_type(
+    'depoimentos',
+    array(
+      'labels' => array(
+        'name' => __('Depoimentos'),
+        'singular_name' => __('Depoimento'),
+        'add_new' => __('Novo depoimento'),
+      ),
+
+      'public' => true,
+      'has_archive' => false,
+      'menu_icon' => 'dashicons-format-quote',
+      'supports' => array('title', 'page-attributes'),
+    )
+  );
+}
+
 
 // Customizar o Footer do WordPress
 function ecovila_custom_footer_admin()
@@ -65,7 +85,7 @@ function ecovila_custom_footer_admin()
 
 
 // Customizando classe do the_custom_post()
-function change_logo_class($html)
+function ecovila_change_logo_class($html)
 {
   $html = str_replace('custom-logo-link', 'header-logo-link', $html);
   return $html;
@@ -73,11 +93,12 @@ function change_logo_class($html)
 
 //Registrando as funções
 add_action('init', 'ecovila_add_resources');
-add_action('init', 'register_slider_banner');
+add_action('init', 'ecovila_register_slider_banner');
+add_action('init', 'ecovila_register_testimony');
 add_action('init', 'ecovila_register_my_menus');
 add_action('init', 'ecovila_register_information');
 add_filter('admin_footer_text', 'ecovila_custom_footer_admin');
-add_filter('get_custom_logo', 'change_logo_class');
+add_filter('get_custom_logo', 'ecovila_change_logo_class');
 
 
 //ADVANCED CUSTOM FIELDS --------------------------------->

@@ -3,6 +3,7 @@
 <body id="page-home">
   <?php require_once 'components/menu.php'; ?>
   <?php require_once 'components/sliders/banner.php'; ?>
+  <?php require_once 'components/sliders/depoimentos.php'; ?>
 
 </body>
 
