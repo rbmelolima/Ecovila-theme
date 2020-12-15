@@ -57,15 +57,16 @@ function ecovila_register_banner()
 }
 
 //Notícias
-function ecovila_register_notice()
+function ecovila_register_blog()
 {
+  //O $post_type deve ficar em português por conta do slug
   register_post_type(
-    'notice',
+    'blog',
     array(
       'labels' => array(
-        'name' => __('Notícia'),
-        'singular_name' => __('Notícia'),
-        'add_new' => __('Nova notícia'),
+        'name' => __('Blog'),
+        'singular_name' => __('Blog'),
+        'add_new' => __('Cadastrar nova notícia'),
       ),
 
       'public' => true,
@@ -80,8 +81,9 @@ function ecovila_register_notice()
 //Serviços
 function ecovila_register_service()
 {
+  //O $post_type deve ficar em português por conta do slug
   register_post_type(
-    'service',
+    'servico',
     array(
       'labels' => array(
         'name' => __('Serviço'),
@@ -100,8 +102,9 @@ function ecovila_register_service()
 //Casas
 function ecovila_register_house()
 {
+  //O $post_type deve ficar em português por conta do slug
   register_post_type(
-    'house',
+    'casa',
     array(
       'labels' => array(
         'name' => __('Casas'),
@@ -180,7 +183,7 @@ add_action('init', 'ecovila_register_testimony');
 add_action('init', 'ecovila_register_menus');
 add_action('init', 'ecovila_register_information');
 add_action('init', 'ecovila_register_partners');
-add_action('init', 'ecovila_register_notice');
+add_action('init', 'ecovila_register_blog');
 add_action('init', 'ecovila_register_house');
 
 
