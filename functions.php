@@ -70,9 +70,49 @@ function ecovila_register_notice()
 
       'public' => true,
       'has_archive' => false,
-      'menu_icon' => 'dashicons-align-center',
+      'menu_icon' => 'dashicons-align-left',
       'supports' => array('title', 'page-attributes', 'author', 'thumbnail', 'editor'),
       'taxonomies' => array('category', 'post_tag'),
+    )
+  );
+}
+
+//Serviços
+function ecovila_register_service()
+{
+  register_post_type(
+    'service',
+    array(
+      'labels' => array(
+        'name' => __('Serviço'),
+        'singular_name' => __('Serviço'),
+        'add_new' => __('Novo serviço'),
+      ),
+
+      'public' => true,
+      'has_archive' => false,
+      'menu_icon' => 'dashicons-hammer',
+      'supports' => array('title', 'page-attributes'),
+    )
+  );
+}
+
+//Casas
+function ecovila_register_house()
+{
+  register_post_type(
+    'house',
+    array(
+      'labels' => array(
+        'name' => __('Casas'),
+        'singular_name' => __('Casas'),
+        'add_new' => __('Nova casa'),
+      ),
+
+      'public' => true,
+      'has_archive' => false,
+      'menu_icon' => 'dashicons-admin-multisite',
+      'supports' => array('title', 'page-attributes'),
     )
   );
 }
@@ -133,6 +173,7 @@ function ecovila_change_logo_class($html)
 }
 
 //Registrando as funções
+add_action('init', 'ecovila_register_service');
 add_action('init', 'ecovila_add_resources');
 add_action('init', 'ecovila_register_banner');
 add_action('init', 'ecovila_register_testimony');
@@ -140,6 +181,9 @@ add_action('init', 'ecovila_register_menus');
 add_action('init', 'ecovila_register_information');
 add_action('init', 'ecovila_register_partners');
 add_action('init', 'ecovila_register_notice');
+add_action('init', 'ecovila_register_house');
+
+
 add_filter('admin_footer_text', 'ecovila_custom_footer_admin');
 add_filter('get_custom_logo', 'ecovila_change_logo_class');
 
