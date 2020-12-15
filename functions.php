@@ -56,6 +56,27 @@ function ecovila_register_banner()
   );
 }
 
+//Notícias
+function ecovila_register_notice()
+{
+  register_post_type(
+    'notice',
+    array(
+      'labels' => array(
+        'name' => __('Notícia'),
+        'singular_name' => __('Notícia'),
+        'add_new' => __('Nova notícia'),
+      ),
+
+      'public' => true,
+      'has_archive' => false,
+      'menu_icon' => 'dashicons-align-center',
+      'supports' => array('title', 'page-attributes', 'author', 'thumbnail', 'editor'),
+      'taxonomies' => array('category', 'post_tag'),
+    )
+  );
+}
+
 //Depoimentos
 function ecovila_register_testimony()
 {
@@ -118,6 +139,7 @@ add_action('init', 'ecovila_register_testimony');
 add_action('init', 'ecovila_register_menus');
 add_action('init', 'ecovila_register_information');
 add_action('init', 'ecovila_register_partners');
+add_action('init', 'ecovila_register_notice');
 add_filter('admin_footer_text', 'ecovila_custom_footer_admin');
 add_filter('get_custom_logo', 'ecovila_change_logo_class');
 
