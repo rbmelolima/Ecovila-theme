@@ -33,7 +33,7 @@
 <div id="contact-absolute">
   <div id="wrapper-contact-tel">
     <span id="phone-fixed-tel"><?= $TELEFONE ?></span>
-    <a href="tel:13988282873" class="contact-phone" title="Telefone">
+    <a href="tel:<?= $TELEFONE ?>" class="contact-phone" title="Telefone">
       <img src="<?php bloginfo('template_url'); ?>/assets/icons/phone.svg" />
     </a>
   </div>
@@ -45,7 +45,7 @@
   </div>
 
   <div>
-    <a href="https://api.whatsapp.com/send?phone=<?= $WHATSAPP ?>" class="contact-whatsapp" title="Whatsapp">
+    <a href="https://api.whatsapp.com/send?phone=55<?= $WHATSAPP ?>" class="contact-whatsapp" title="Whatsapp">
       <img src="<?php bloginfo('template_url'); ?>/assets/icons/whatsapp.svg" />
     </a>
   </div>
