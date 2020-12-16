@@ -1,5 +1,5 @@
 <?php
-//Menus dinâmicos
+// Menus dinâmicos
 function ecovila_register_menus()
 {
   register_nav_menus(
@@ -10,7 +10,7 @@ function ecovila_register_menus()
   );
 }
 
-//Informações da empresa
+// Informações da empresa
 function ecovila_register_information()
 {
   register_post_type(
@@ -29,14 +29,14 @@ function ecovila_register_information()
   );
 }
 
-//Recursos no site
+// Recursos no site
 function ecovila_add_resources()
 {
   add_theme_support('custom-logo');
   add_theme_support('post-thumbnails');
 }
 
-//Banner
+// Banner
 function ecovila_register_banner()
 {
   register_post_type(
@@ -56,7 +56,7 @@ function ecovila_register_banner()
   );
 }
 
-//Notícias
+// Notícias
 function ecovila_register_blog()
 {
   //O $post_type deve ficar em português por conta do slug
@@ -79,7 +79,7 @@ function ecovila_register_blog()
   );
 }
 
-//Serviços
+// Serviços
 function ecovila_register_service()
 {
   //O $post_type deve ficar em português por conta do slug
@@ -100,7 +100,7 @@ function ecovila_register_service()
   );
 }
 
-//Casas
+// Casas
 function ecovila_register_house()
 {
   //O $post_type deve ficar em português por conta do slug
@@ -121,7 +121,7 @@ function ecovila_register_house()
   );
 }
 
-//Depoimentos
+// Depoimentos
 function ecovila_register_testimony()
 {
   register_post_type(
@@ -141,7 +141,7 @@ function ecovila_register_testimony()
   );
 }
 
-//Parceiros
+// Parceiros
 function ecovila_register_partners()
 {
   register_post_type(
@@ -176,6 +176,14 @@ function ecovila_change_logo_class($html)
   return $html;
 }
 
+// Limpando o painell administrativo
+function ecovila_remove_menu_pages()
+{
+  remove_menu_page('edit.php');                   //Posts
+  remove_menu_page('edit-comments.php');          //Comments 
+};
+
+
 //Registrando as funções
 add_action('init', 'ecovila_register_service');
 add_action('init', 'ecovila_add_resources');
@@ -187,9 +195,9 @@ add_action('init', 'ecovila_register_partners');
 add_action('init', 'ecovila_register_blog');
 add_action('init', 'ecovila_register_house');
 
-
 add_filter('admin_footer_text', 'ecovila_custom_footer_admin');
 add_filter('get_custom_logo', 'ecovila_change_logo_class');
+add_action('admin_menu', 'ecovila_remove_menu_pages');
 
 
 //ADVANCED CUSTOM FIELDS --------------------------------->
