@@ -74,6 +74,7 @@ function ecovila_register_blog()
       'menu_icon' => 'dashicons-align-left',
       'supports' => array('title', 'page-attributes', 'author', 'thumbnail', 'editor'),
       'taxonomies' => array('category', 'post_tag'),
+      'show_in_rest' => true,
     )
   );
 }
