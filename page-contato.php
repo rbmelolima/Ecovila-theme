@@ -99,7 +99,7 @@
           <input type="text" name="MESSAGE" placeholder="Escreva aqui sua mensagem..." required>
         </div>
 
-        <button type="button" name="enviar">
+        <button type="submit" name="enviar">
           Enviar
           <i class="fas fa-long-arrow-alt-right"></i>
         </button>
@@ -107,7 +107,7 @@
 
         <?php
         if (isset($_POST['enviar'])) {
-          include "./libs/php-mailer/PHPMailerAutoload.php";
+          require_once(realpath(dirname(__FILE__) . "./libs/php-mailer/PHPMailerAutoload.php"));
 
           $cliente_nome = $_POST['USER_NAME'];
           $cliente_email = $_POST['USER_EMAIL'];
@@ -120,19 +120,19 @@
           $contact_form = <<<EOF
                     <table>
                     <tr>
-                        <td> Nome <td/>
+                        <td> Nome:  <td/>
                         <td> $cliente_nome <td/>
                     </tr>
                     <tr>
-                        <td> Telefone <td/>
+                        <td> Telefone: <td/>
                         <td> $cliente_telefone <td/>
                     </tr>
                     <tr>
-                        <td> Email <td/>
+                        <td> Email: <td/>
                         <td> $cliente_email <td/>
                     </tr>
                     <tr>
-                        <td> Forma de contato <td/>
+                        <td> Forma de contato: <td/>
                         <td> $cliente_forma_contato <td/>
                     </tr>
                     <tr>
@@ -140,11 +140,11 @@
                         <td> $como_nos_conheceu <td/>
                     </tr>
                     <tr>
-                        <td> Assunto <td/>
+                        <td> Assunto: <td/>
                         <td> $cliente_assunto <td/>
                     </tr>
                     <tr>
-                        <td> Messagem <td/>
+                        <td> Messagem: <td/>
                         <td> $cliente_mensagem <td/>
                     </tr>                  
                     </table>                
