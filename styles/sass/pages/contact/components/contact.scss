@@ -26,6 +26,22 @@ $breakpoint-form: $breakpoint-tablet + 60px;
     @include divider(var(--cor-azul-escuro));
     margin-bottom: 100px;
   }
+
+  .alert-user {
+    width: 100%;
+    margin-top: 32px;
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .alert-user.sucess {
+    color: var(--cor-verde-claro);
+  }
+
+  .alert-user.error {
+    color: rgb(177, 27, 27);
+  }
 }
 
 #page-contact form {
