@@ -10,7 +10,7 @@
 .section-highlight .swiper-container-highlight {
   @include SwiperHighlight;
 
-  position: relative;  
+  position: relative;
 }
 
 .section-highlight .swiper-container {
@@ -19,11 +19,11 @@
   }
 }
 
-.section-highlight h2 {
+.section-highlight h1 {
   @include title();
 }
 
-.section-highlight p {
+.section-highlight h2 {
   text-align: center;
   color: var(--cor-azul-escuro);
   font-size: 22px;
@@ -46,7 +46,7 @@
 
   border: 2px solid var(--cor-azul-escuro);
   color: #fff;
-  height: 500px; 
+  height: 500px;
   border-radius: 16px;
   position: relative;
 }

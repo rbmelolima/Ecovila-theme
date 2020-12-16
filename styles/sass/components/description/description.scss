@@ -23,14 +23,15 @@
     font-weight: 600;
   }
 
-  hr {
+  hr,
+  .divider {
     @include divider(var(--cor-azul-escuro));
   }
 
   p {
     @include paragraph();
   }
-  
+
   a {
     @include linkDefaultStyle();
 
@@ -48,7 +49,6 @@
     }
   }
 }
-
 
 .section-description .iframe-container {
   margin: 0 auto;
