@@ -35,10 +35,15 @@ a {
 
 body {
   line-height: 1.6;
+  position: relative;
 }
 
 .no-scroll {
   overflow: hidden;
+}
+
+.invisible {
+  display: none;
 }
 
 .swiper-slide {

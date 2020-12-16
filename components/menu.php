@@ -16,17 +16,11 @@
   </div>
 
   <div id="menu-container-overlay">
-    <div class="wrapper">
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="sobre.html">Ecovila Resort Residencial</a></li>
-        <li><a href="">Casa Eficiente</a></li>
-        <li><a href="">Casas</a></li>
-        <li><a href="">Serviços</a></li>
-        <li><a href="">Blog</a></li>
-        <li><a href="contato.html">Contato</a></li>
-      </ul>
-    </div>
+    <?php
+    wp_nav_menu(
+      array('theme_location' => 'header_menu')
+    );
+    ?>
   </div>
 </nav>
 

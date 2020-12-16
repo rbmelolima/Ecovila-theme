@@ -42,7 +42,6 @@
   <?php require_once 'components/ultimas-noticias.php'; ?>
 
   <?php require_once 'components/sliders/parceiros.php'; ?>
-
 </body>
 
 <?php require_once 'components/footer.php'; ?>
