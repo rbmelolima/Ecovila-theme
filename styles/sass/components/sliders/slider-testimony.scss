@@ -3,11 +3,10 @@
 #page-home .testimony {
   width: 100%;
   height: fit-content;
-
   padding: $padding-section-mobile;
 
   @media screen and (min-width: 500px) {
-    padding: 120px 12px;
+    padding: 80px 12px;
   }
 }
 

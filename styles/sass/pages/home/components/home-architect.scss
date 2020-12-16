@@ -27,8 +27,7 @@
 }
 
 #page-home .architect .container-background .image {
-  z-index: 1;
-  background-image: url("../../../assets/images/arquiteta.png");
+  z-index: 1;  
   @include backgroundCover();
 }
 
