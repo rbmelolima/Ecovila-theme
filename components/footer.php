@@ -5,29 +5,45 @@
 
   <div class="section-sitemap pages">
     <nav>
-      <a href="index.html" title="">Início</a>
-      <a href="sobre.html" title="">Ecovila Resort Residencial</a>
-      <a href="http://" title="">Blog</a>
-      <a href="contato.html" title="">Contato</a>
+      <?php
+      wp_nav_menu(
+        array('theme_location' => 'footer_menu_nav')
+      );
+      ?>
     </nav>
   </div>
 
   <div class="section-sitemap houses">
-    <a href="http://" title="">Casa Eficiente</a>
-    <a href="http://" title="">Tecnologia</a>
-    <a href="http://" title="">2 suítes gar. p/ 2 carros</a>
-    <a href="http://" title="">2 suítes gar. p/ 3 carros</a>
-    <a href="http://" title="">2 suítes gar. p/ 4 carros</a>
-    <a href="http://" title="">2 suítes gar. p/ 5 carros</a>
+    <?php
+    $loop = new WP_Query(array(
+      'post_type' => 'casa',
+    ));
+
+    while ($loop->have_posts()) : $loop->the_post();
+    ?>
+      <a href="<?= the_permalink(); ?>" title="">
+        <?= the_title(); ?>
+      </a>
+
+    <?php endwhile; ?>
+    <?php wp_reset_query(); ?>
   </div>
 
   <div class="section-sitemap services">
     <nav>
-      <a href="http://" title=""> Serviço </a>
-      <a href="http://" title=""> Serviço </a>
-      <a href="http://" title=""> Serviço </a>
-      <a href="http://" title=""> Serviço </a>
-      <a href="http://" title=""> Serviço </a>
+      <?php
+      $loop = new WP_Query(array(
+        'post_type' => 'servico',
+      ));
+
+      while ($loop->have_posts()) : $loop->the_post();
+      ?>
+        <a href="<?= the_permalink(); ?>" title="">
+          <?= the_title(); ?>
+        </a>
+
+      <?php endwhile; ?>
+      <?php wp_reset_query(); ?>
     </nav>
   </div>
 
