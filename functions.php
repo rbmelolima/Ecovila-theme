@@ -94,7 +94,7 @@ function ecovila_register_service()
       'public' => true,
       'has_archive' => false,
       'menu_icon' => 'dashicons-hammer',
-      'supports' => array('title', 'page-attributes'),
+      'supports' => array('title', 'page-attributes', 'thumbnail'),
     )
   );
 }
@@ -115,7 +115,7 @@ function ecovila_register_house()
       'public' => true,
       'has_archive' => false,
       'menu_icon' => 'dashicons-admin-multisite',
-      'supports' => array('title', 'page-attributes'),
+      'supports' => array('title', 'page-attributes', 'thumbnail'),
     )
   );
 }

@@ -37,6 +37,8 @@
   font-weight: bold;
   max-width: 900px;
   margin: 0 auto 16px auto;
+  width: 100%;
+  display: block;
 }
 
 @mixin linkDefaultStyle() {
