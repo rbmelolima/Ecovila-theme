@@ -1,5 +1,14 @@
 <?php require_once 'components/header.php'; ?>
 
+<?php
+function getUrl()
+{
+  $protocolo = (isset($_SERVER['HTTPS']) && ($_SERVER['HTTPS'] == "on") ? "https" : "http");
+  $url = '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+  return $protocolo . $url;
+}
+?>
+
 <body id="page-notice">
   <?php require_once 'components/menu.php'; ?>
 
@@ -32,8 +41,14 @@
 
       <div class="share">
         <a href="" title="Voltar"><i class="fas fa-long-arrow-alt-left"></i></a>
-        <a href="" title="Compartilhar via Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="" title="Compartilhar via Linkedin"><i class="fab fa-linkedin-in"></i></a>
+
+        <a href="https://www.facebook.com/sharer/sharer.php?u=<?= getUrl(); ?>" target="_blank" title="Compartilhar via Facebook" class="facebook-link">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=<?= getUrl(); ?>" target="_blank" title="Compartilhar via Linkedin" class="linkedin-link">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
       </div>
     </div>
   </main>
