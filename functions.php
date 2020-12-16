@@ -176,7 +176,7 @@ function ecovila_change_logo_class($html)
   return $html;
 }
 
-// Limpando o painell administrativo
+// Limpando o painel administrativo
 function ecovila_remove_menu_pages()
 {
   remove_menu_page('edit.php');                   //Posts
