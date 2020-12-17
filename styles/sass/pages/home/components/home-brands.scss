@@ -13,12 +13,12 @@
 }
 
 #page-home .brands .brands-container img {
-  width: 100%;
-  max-width: 200px;
   text-align: center;
-  height: auto;
+  height: 150px;
+  width: auto;
 }
 
 #page-home .brands .brands-container .swiper-slide {
   text-align: center;
+  width: fit-content;
 }

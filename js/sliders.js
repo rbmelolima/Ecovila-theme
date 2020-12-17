@@ -62,7 +62,6 @@ const SwiperBrands = new Swiper('.swiper-container-brands .swiper-container', {
   direction: 'horizontal',
   grabCursor: true,
   loop: true,
-
   breakpoints: {
     1: {
       slidesPerView: 2,
@@ -83,7 +82,7 @@ const SwiperBrands = new Swiper('.swiper-container-brands .swiper-container', {
   }
 });
 
-const SwiperGallery= new Swiper('.swiper-container-gallery .swiper-container', {
+const SwiperGallery = new Swiper('.swiper-container-gallery .swiper-container', {
   slidesPerView: 4,
   spaceBetween: 24,
   speed: 500,
