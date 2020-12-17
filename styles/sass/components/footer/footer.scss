@@ -3,7 +3,7 @@ footer.footer {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 24px 16px;
+  padding: 1.5rem 1rem;
   color: #fff;
   background-color: var(--cor-verde-escuro);
 
@@ -16,10 +16,10 @@ footer.footer {
   }  
 
   @media screen and (min-width: $breakpoint-notebook) {
-    padding: 24px 32px;
+    padding: 1.5rem 2rem;
   }
 
   @media screen and (min-width: $breakpoint-desktop) {
-    padding: 24px 64px;
+    padding: 1.5rem 64px;
   }
 }

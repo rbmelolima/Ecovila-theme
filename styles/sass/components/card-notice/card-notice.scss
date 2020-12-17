@@ -1,15 +1,15 @@
 .cardNotice .content {
-  @include shadow(10px);
+  @include shadow(0.625rem);
 
   margin: 0 auto;
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  padding: 32px 16px;
+  padding: 2rem 1rem;
   width: 100%;
 
   @media screen and (min-width: $breakpoint-tablet) {
-    padding: 40px;
+    padding: 2.5rem;
     max-width: 600px;
   }
 }
@@ -18,23 +18,23 @@
   @include linkDefaultStyle();
 
   width: fit-content;
-  border-radius: 32px;
-  padding: 8px 16px;
-  margin-bottom: 16px;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
   color: #fff;
-  font-size: 16px;
+  font-size: 1rem;
   background-color: var(--cor-amarelo);  
 }
 
 .cardNotice .content span {
   color: var(--cor-laranja);
   font-weight: bold;
-  font-size: 16px;
-  margin-bottom: 8px;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .cardNotice .content h5 {
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: bold;
   color: var(--cor-azul-escuro);
 }

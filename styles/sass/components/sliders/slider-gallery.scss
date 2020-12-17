@@ -2,12 +2,14 @@
 
 .section-gallery {
   @include padding();
+
   width: 100%;
   height: fit-content;
 }
 
 .section-gallery .swiper-container-gallery {
   @include SwiperHighlight;
+  
   position: relative;
 }
 
@@ -24,9 +26,9 @@
 .section-gallery p {
   text-align: center;
   color: var(--cor-azul-escuro);
-  font-size: 22px;
+  font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 
 .section-gallery .divider {
@@ -40,7 +42,8 @@
 }
 
 .swiper-container-gallery .swiper-slide {
-  width: 100%;
-  min-height: 350px;
   @include backgroundCover();
+
+  width: 100%;
+  min-height: 350px;  
 }

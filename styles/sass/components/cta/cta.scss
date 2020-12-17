@@ -19,9 +19,9 @@ section.cta .image-cta {
 }
 
 section.cta .primary-box {
-  border: 8px solid var(--cor-verde-escuro);
+  border: 0.5rem solid var(--cor-verde-escuro);
   background-color: transparent;
-  padding: 16px;
+  padding: 1rem;
   z-index: 2;
   position: relative;
   width: 90%;
@@ -51,7 +51,7 @@ section.cta .primary-box {
 section.cta .second-box {
   width: 100%;
   min-height: 400px;
-  padding: 28px;
+  padding: 20.5rem;
   background-color: var(--cor-azul-escuro);
   color: var(--cor-amarelo);
   display: flex;
@@ -74,7 +74,7 @@ section.cta .second-box {
   h6 {
     font-weight: bold;
     font-size: 30px;
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
   }
 
   a {

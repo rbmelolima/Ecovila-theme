@@ -2,18 +2,18 @@
   @include padding();
   max-width: 1200px;
   margin: 0 auto;
-  column-gap: 32px;
+  column-gap: 2rem;
 
   h1 {
     @include title();
   }
 
   h1 + h2 {
-    margin-top: -16px;
+    margin-top: -1rem;
   }
 
   h2 + hr {
-    margin-top: 16px;
+    margin-top: 1rem;
   }
 
   h2 {
@@ -36,16 +36,16 @@
     @include linkDefaultStyle();
 
     background-color: transparent;
-    font-size: 16px;
+    font-size: 1rem;
     color: var(--cor-azul-escuro);
     width: fit-content;
     border-radius: 50px;
-    padding: 16px;
+    padding: 1rem;
     border: 2px solid var(--cor-verde-claro);
-    margin: 40px auto 0 auto;
+    margin: 2.5rem auto 0 auto;
 
     i {
-      margin-left: 8px;
+      margin-left: 0.5rem;
     }
   }
 }

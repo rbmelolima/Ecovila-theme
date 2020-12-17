@@ -24,7 +24,7 @@
 }
 
 #page-home .testimony .swiper-slide {
-  font-size: 18px;
+  font-size: 1.2rem;
   background: transparent;
   text-align: center;
   display: flex;
@@ -63,12 +63,14 @@
 }
 
 #page-home .testimony .container-testimony .img-testimony img {
-  width: 130px;
-  height: 130px;
+  $sizeImage: 8rem;
+
+  width: 8rem;
+  height: 8rem;
   border-radius: 50%;
   position: absolute;
-  left: calc(50% - 65px);
-  top: -65px;
+  left: calc(50% - 4rem);
+  top: -4rem;
 }
 
 #page-home .testimony .container-testimony {
@@ -80,14 +82,14 @@
   h6 {
     color: var(--cor-azul-escuro);
     font-weight: bold;
-    font-size: 32px;
-    margin-bottom: 16px;
+    font-size: 2rem;
+    margin-bottom: 1rem;
   }
 
   a {
-    margin-top: 16px;
+    margin-top: 1rem;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     color: #1f8a70;
   }
@@ -103,7 +105,7 @@
     position: absolute;
     width: 8em;
     top: -3em;
-    left: 5px;
+    left: 4px;
 
     @media screen and (max-width: $breakpoint-notebook) {
       display: none;

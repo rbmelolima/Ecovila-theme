@@ -11,7 +11,7 @@
     display: grid;
     grid-template-columns: 0.6fr 1fr 1fr 1fr 2fr;
     justify-content: start;
-    gap: 16px;
+    gap: 1rem;
     text-align: left;
   }
 }
@@ -23,7 +23,7 @@
 }
 
 #sitemap .section-sitemap {
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 
   @media screen and (min-width: $breakpoint-notebook) {
     margin-bottom: 0;
@@ -31,7 +31,7 @@
 }
 
 #sitemap img {
-  width: 120px;
+  width: 7.5rem;
   height: auto;
 
   @media screen and (max-width: $breakpoint-notebook) {
@@ -43,8 +43,8 @@
   a,
   li,
   span {
-    margin-bottom: 8px;
-    font-size: 16px;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
     font-weight: bold;
     color: var(--cor-azul-escuro);
   }
@@ -66,24 +66,24 @@
   @media screen and (max-width: $breakpoint-notebook) {
     display: block;
     text-align: center;
-    margin-bottom: 32px;
+    margin-bottom: 2rem;
   }
 }
 
 #sitemap span .icon {
-  width: 24px;
-  height: 24px;
+  width: 1.5rem;
+  height: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 8px;
+  margin-right: 0.5rem;
   color: var(--cor-verde-escuro);
 
   @media screen and (max-width: $breakpoint-notebook) {
     width: 100%;
     margin: 0;
     text-align: center;
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
   }
 }
 
