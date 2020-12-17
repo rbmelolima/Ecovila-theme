@@ -17,7 +17,7 @@ function toggleMenu() {
 }
 
 
-function tree() {
+function menu_active_submenu() {
   //Pegando todas as 'li' de dentro do menu
   const li = document
     .getElementById('menu-container-overlay')
@@ -44,4 +44,10 @@ function tree() {
   }
 }
 
-tree();
+function active_submenu_with_click(idSubmenu) {
+  document.getElementById(idSubmenu).classList.toggle('show');
+}
+
+
+//Call functions
+menu_active_submenu();
