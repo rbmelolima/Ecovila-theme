@@ -3,19 +3,55 @@ section.cta {
 
   display: flex;
   height: 100%;
+
+  //Sobrescrevendo o padding top padrão de todos os sections
+  padding-top: 200px !important;
+}
+
+section.cta .image-cta {
+  @include backgroundCover();
+  width: 100%;
+  max-width: 1200px;
+  height: 400px;
+  z-index: 1;
+  position: relative;
+  margin: 0 auto;
 }
 
 section.cta .primary-box {
   border: 8px solid var(--cor-verde-escuro);
   background-color: transparent;
   padding: 16px;
-  width: 100%;
+  z-index: 2;
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  top: -200px;
+}
+
+@media screen and (min-width: 1224px) {
+  section.cta {
+    padding-top: unset;
+  }
+
+  section.cta .image-cta {
+    height: 600px;
+  }
+
+  section.cta .primary-box {
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    right: -200px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
 }
 
 section.cta .second-box {
   width: 100%;
   min-height: 400px;
-  padding: 32px 8px;
+  padding: 28px;
   background-color: var(--cor-azul-escuro);
   color: var(--cor-amarelo);
   display: flex;
@@ -27,7 +63,7 @@ section.cta .second-box {
   img {
     width: 100px;
     height: auto;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
 
   h1,
@@ -37,7 +73,7 @@ section.cta .second-box {
   h5,
   h6 {
     font-weight: bold;
-    font-size: 32px;
+    font-size: 30px;
     margin-bottom: 24px;
   }
 

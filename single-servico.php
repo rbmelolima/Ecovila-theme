@@ -57,9 +57,11 @@
   <?php require_once 'components/sliders/servicos.php'; ?>
 
   <section class="cta">
-    <div class="primary-box">
-      <div class="second-box">
-        <?= the_field('conteudo_cta'); ?>
+    <div class="image-cta" style="background-image: url(<?= the_field('img_cta'); ?>);">
+      <div class="primary-box">
+        <div class="second-box">
+          <?= the_field('conteudo_cta'); ?>
+        </div>
       </div>
     </div>
   </section>
