@@ -11,7 +11,7 @@ section.cta {
 section.cta .image-cta {
   @include backgroundCover();
   width: 100%;
-  max-width: $max-with-content;
+  max-width: $max-width-content;
   height: 400px;
   z-index: 1;
   position: relative;
@@ -19,23 +19,23 @@ section.cta .image-cta {
 }
 
 section.cta .primary-box {
-  border: 0.5rem solid var(--cor-verde-escuro);
+  border: 8px solid var(--cor-verde-escuro);
   background-color: transparent;
-  padding: 1rem;
+  padding: 16px;
   z-index: 2;
   position: relative;
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   top: -200px;
 }
 
 @media screen and (min-width: 1224px) {
-  section.cta {
+  section.cta  {
     padding-top: unset;
   }
 
   section.cta .image-cta {
-    height: 600px;
+    height: 600px;    
   }
 
   section.cta .primary-box {
@@ -51,7 +51,7 @@ section.cta .primary-box {
 section.cta .second-box {
   width: 100%;
   min-height: 400px;
-  padding: 20.5rem;
+  padding: 28px;
   background-color: var(--cor-azul-escuro);
   color: var(--cor-amarelo);
   display: flex;
@@ -73,8 +73,8 @@ section.cta .second-box {
   h5,
   h6 {
     font-weight: bold;
-    font-size: 30px;
-    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    margin-bottom: 24px;
   }
 
   a {

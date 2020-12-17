@@ -24,10 +24,13 @@
 }
 
 .section-highlight h2 {
-  text-align: center;
   color: var(--cor-azul-escuro);
   font-size: 1.5rem;
   font-weight: 600;
+  text-align: center;
+  max-width: $max-width-content;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 2.5rem;
 }
 
