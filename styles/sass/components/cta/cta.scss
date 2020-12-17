@@ -30,6 +30,11 @@ section.cta .second-box {
     margin-bottom: 16px;
   }
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
   h6 {
     font-weight: bold;
     font-size: 32px;
@@ -37,8 +42,8 @@ section.cta .second-box {
   }
 
   a {
-    @include linkDefaultStyle();   
-     
+    @include linkDefaultStyle();
+
     border: 1px solid transparent;
     background-color: var(--cor-verde-claro);
     color: var(--cor-azul-escuro);

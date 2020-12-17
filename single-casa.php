@@ -15,9 +15,9 @@
     <section class="section-description">
       <?= the_field('conteudo_1'); ?>
 
-      <?php if (get_field('link_video') != null) : ?>
+      <?php if (get_field('cod_video') != null) : ?>
         <div class="iframe-container">
-          <iframe src="<?= the_field('link_video') ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe src="<?= the_field('cod_video') ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       <?php endif; ?>
     </section>
@@ -48,7 +48,11 @@
           <div class="swiper-button-next"><i class="fas fa-long-arrow-alt-right"></i></div>
         </div>
       </div>
-    </section>   
+    </section>
+
+    <?php require_once 'components/sliders/casas.php'; ?>
+
+    <?php require_once 'components/sliders/servicos.php'; ?>   
   </main>
 
 </body>
