@@ -5,16 +5,17 @@
   --cor-azul-escuro: #004358;
   --cor-laranja: #fd7400;
   --cor-amarelo: #ffe11a;
+  font-size: 16px;
 }
 
 $breakpoint-desktop: 1200px;
 $breakpoint-notebook: 1024px;
-$breakpoint-tablet: 740px;
-$breakpoint-mobile: 450px;
+$breakpoint-tablet: 736px;
+$breakpoint-mobile: 448px;
 
-$padding-section-desktop: 100px 64px;
+$padding-section-desktop: 96px 64px;
 $padding-section-notebook: 80px 32px;
-$padding-section-mobile: 60px 16px;
+$padding-section-mobile: 48px 16px;
 
 *,
 button,
