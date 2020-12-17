@@ -24,11 +24,7 @@
               <div class="img-testimony">
                 <img src="<?php the_field('imagem'); ?>" class="img-fluid" />
               </div>
-              <h3><?php the_field('nome'); ?></h3>
-              <p><?php the_field('depoimento'); ?></p>
-              <?php if (get_field('link') != null || get_field('link') != '') : ?>
-                <a href="<?php get_field('link') ?>" target="_blank" rel="noopener">Acessar o vídeo</a>
-              <?php endif; ?>
+              <?php the_field('depoimento'); ?>
             </div>
           </div>
 
