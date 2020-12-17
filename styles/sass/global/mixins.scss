@@ -30,7 +30,7 @@
   background-size: cover;
 }
 
-@mixin title($size: 36px, $color: var(--cor-verde-claro)) {
+@mixin title($size: 2rem, $color: var(--cor-verde-claro)) {
   text-align: center;
   color: $color;
   font-size: $size;

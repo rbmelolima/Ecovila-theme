@@ -21,23 +21,23 @@
   @include linkDefaultStyle();
 
   width: fit-content;
-  border-radius: 32px;
-  padding: 8px 16px;
-  margin-bottom: 16px;
+  border-radius: 2rem;
+  padding: 8px 1rem;
+  margin-bottom: 1rem;
   color: #fff;
-  font-size: 16px;
+  font-size: 1rem;
   background-color: var(--cor-amarelo);
 }
 
 .notice-card-blog span {
   color: var(--cor-laranja);
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1rem;
   margin-bottom: 8px;
 }
 
 .notice-card-blog h5 {
-  font-size: 28px;
+  font-size: 1.5rem;
   font-weight: bold;
   color: var(--cor-azul-escuro);
 }
@@ -58,5 +58,5 @@
   flex-direction: column;
   justify-content: center;
   background-color: #fff;
-  padding: 32px 16px;
+  padding: 2rem 1rem;
 }

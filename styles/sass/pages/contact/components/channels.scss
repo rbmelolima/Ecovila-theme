@@ -22,24 +22,24 @@
   }
 
   article img {
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
   }
 
   article p {
     color: var(--cor-azul-escuro);
-    font-size: 16px;
-    margin-bottom: 8px;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
   }
 
   article h3 {
     font-weight: bold;
-    font-size: 24px;
+    font-size: 1.5rem;
     color: var(--cor-verde-claro);
   }
 
   @media screen and (min-width: $breakpoint-tablet) {
     display: grid;
-    gap: 32px;
+    gap: 2rem;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
   }

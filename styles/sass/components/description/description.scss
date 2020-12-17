@@ -1,6 +1,6 @@
 .section-description {
   @include padding();
-  max-width: 1200px;
+  max-width: $max-with-content;
   margin: 0 auto;
   column-gap: 2rem;
 
@@ -52,7 +52,7 @@
 
 .section-description .iframe-container {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: $max-with-content;
   margin-top: 64px;
 }
 

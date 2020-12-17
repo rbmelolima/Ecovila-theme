@@ -1,7 +1,9 @@
 $breakpoint-form: $breakpoint-tablet + 60px;
 
 #page-contact .form-contact {
-  padding: 0 16px;
+  padding: 0 1rem;
+  width: 100%;
+  margin-bottom: 120px;
 
   @media screen and (min-width: $breakpoint-notebook) {
     padding: 0 32px;
@@ -11,15 +13,12 @@ $breakpoint-form: $breakpoint-tablet + 60px;
     padding: 0 64px;
   }
 
-  width: 100%;
-  margin-bottom: 120px;
-
   h2 {
     text-align: center;
     color: var(--cor-verde-claro);
-    font-size: 36px;
+    font-size: 2rem;
     font-weight: bold;
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
   }
 
   .divider {
@@ -31,7 +30,7 @@ $breakpoint-form: $breakpoint-tablet + 60px;
     width: 100%;
     margin-top: 32px;
     display: block;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: bold;
   }
 
@@ -54,22 +53,22 @@ $breakpoint-form: $breakpoint-tablet + 60px;
 
   @media screen and (min-width: $breakpoint-form) {
     display: grid;
-    column-gap: 32px;
+    column-gap: 2rem;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
   }
 }
 
 #page-contact form label {
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1rem;
   color: var(--cor-azul-escuro);
 }
 
 #page-contact form input,
 #page-contact form select {
-  padding: 12px 16px;
+  padding: 12px 1rem;
   border: 1px solid var(--cor-verde-escuro);
   color: var(--cor-verde-escuro);
   border-radius: 24px;
@@ -103,10 +102,10 @@ $breakpoint-form: $breakpoint-tablet + 60px;
   background-color: var(--cor-verde-claro);
   color: #fff;
   font-weight: bold;
-  padding: 12px 16px;
+  padding: 12px 1rem;
   width: 100%;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1rem;
   border-radius: 24px;
   margin-top: 32px;
   text-align: left;
@@ -115,6 +114,6 @@ $breakpoint-form: $breakpoint-tablet + 60px;
   align-items: center;
 
   @media screen and (min-width: $breakpoint-form) {
-    width: 140px;
+    width: 10rem;
   }
 }
