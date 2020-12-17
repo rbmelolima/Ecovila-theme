@@ -23,7 +23,7 @@
     </section>
 
     <section class="section-gallery">
-      <h2> Confira algumas imagens sobre esta casa!</h2>
+      <h2> Confira algumas imagens!</h2>
       <div class="divider"></div>
 
       <div class="swiper-container-gallery">
@@ -52,7 +52,17 @@
 
     <?php require_once 'components/sliders/casas.php'; ?>
 
-    <?php require_once 'components/sliders/servicos.php'; ?>   
+    <?php require_once 'components/sliders/servicos.php'; ?>
+
+    <section class="cta">
+      <div class="image-cta" style="background-image: url(<?= the_field('img_cta'); ?>);">
+        <div class="primary-box">
+          <div class="second-box">
+            <?= the_field('conteudo_cta'); ?>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
 </body>
