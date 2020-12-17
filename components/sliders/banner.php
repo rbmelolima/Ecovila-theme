@@ -8,23 +8,15 @@
       ));
       while ($loop->have_posts()) : $loop->the_post();
       ?>
-      <!-- Slides -->
-      <div class="swiper-slide" style="background-image: url(<?php the_field('imagem'); ?>)">
-        <div class="filter-black"></div>
-        <div class="content">
-          <h1>
-            <?php the_field('texto'); ?>
-          </h1>
-
-          <?php if (get_field('url_do_link') != null && get_field('texto_do_link') != null) : ?>
-          <a href="<?php the_field('url_do_link'); ?>" class="button">
-            <?php the_field('texto_do_link'); ?>
-            <i class="fas fa-long-arrow-alt-right"></i>
-          </a>
-          <?php endif; ?>
+        <!-- Slides -->
+        <div class="swiper-slide" style="background-image: url(<?php the_field('imagem'); ?>)">
+          <div class="filter-black"></div>
+          <div class="content">
+            <div class="text">
+              <?php the_field('conteudo'); ?>
+            </div>
+          </div>
         </div>
-
-      </div>
       <?php endwhile; ?>
       <?php wp_reset_query(); ?>
     </div>
