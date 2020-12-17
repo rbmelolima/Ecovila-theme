@@ -17,13 +17,13 @@ function ecovila_register_information()
     'information',
     array(
       'labels' => array(
-        'name' => __('Informações sobre a empresa'),
+        'name' => __('Sobre a empresa'),
         'add_new' => __('Adicionar informações'),
       ),
 
       'public' => true,
       'has_archive' => false,
-      'menu_icon' => 'dashicons-share',
+      'menu_icon' => 'dashicons-info',
       'supports' => array('title', 'page-attributes'),
     )
   );
@@ -87,7 +87,7 @@ function ecovila_register_service()
     'servico',
     array(
       'labels' => array(
-        'name' => __('Serviço'),
+        'name' => __('Serviços'),
         'singular_name' => __('Serviço'),
         'add_new' => __('Novo serviço'),
       ),
@@ -109,7 +109,7 @@ function ecovila_register_house()
     array(
       'labels' => array(
         'name' => __('Casas'),
-        'singular_name' => __('Casas'),
+        'singular_name' => __('Casa'),
         'add_new' => __('Nova casa'),
       ),
 
@@ -155,7 +155,7 @@ function ecovila_register_partners()
 
       'public' => true,
       'has_archive' => false,
-      'menu_icon' => 'dashicons-images-alt',
+      'menu_icon' => 'dashicons-groups',
       'supports' => array('title', 'page-attributes'),
     )
   );
