@@ -9,7 +9,7 @@
 
 3. Suba esse tema no Wordpress
 
-4. Baixe o Advanced Custom Fields e WP User Avatar
+4. Baixe o (plugins) Advanced Custom Fields, ACF Photo Gallery Field, WP User Avatar
 
 ### :art: Personalização
 
