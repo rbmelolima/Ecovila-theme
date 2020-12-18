@@ -62,3 +62,20 @@
   max-width: $max-width-content;
   margin: 0 auto;
 }
+
+#page-blog .blog-notices-container-wrapper .cardNotice:nth-child(even) {
+  @media screen and (min-width: 768px) {
+    .thumbnail {
+      margin-left: auto;
+    }
+
+    .content {
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      left: 0;
+      z-index: 2;
+    }
+  }
+}
