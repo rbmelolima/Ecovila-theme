@@ -3,6 +3,11 @@
   width: 100%;
 }
 
+#page-about .ctas p {
+  display: inline;
+  width: fit-content;
+}
+
 #page-about .ctas a {
   @include linkDefaultStyle();
 
@@ -24,7 +29,7 @@
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0 48px;
 
   @media screen and (max-width: $breakpoint-notebook) {
@@ -38,18 +43,34 @@
   }
 }
 
-#page-about .ctas a:first-child {
+#page-about .ctas p:nth-child(1) a {
   background-color: var(--cor-verde-claro);
   color: var(--cor-azul-escuro);
 }
 
-#page-about .ctas a:nth-child(2) {
+#page-about .ctas p:nth-child(2) a {
   background-color: var(--cor-azul-escuro);
   color: var(--cor-verde-claro);
 }
 
-#page-about .ctas a:last-child {
+#page-about .ctas p:nth-child(3) a {
   color: var(--cor-azul-escuro);
   background-color: transparent;
   border-color: var(--cor-azul-escuro);
+}
+
+#page-about .ctas p:nth-child(even) {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+@media screen and (max-width: $breakpoint-notebook) {
+  #page-about .ctas p:nth-child(even) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  #page-about .ctas p {
+    width: 100%;
+  }
 }
