@@ -8,7 +8,7 @@
   ?>
 
   <main>
-    <div class="cover" style="background-image: url(<?= $url ?>);">
+    <div class="section-cover" style="background-image: url(<?= $url ?>);">
       <div class="overlay">
         <h1>Entre em contato</h1>
       </div>

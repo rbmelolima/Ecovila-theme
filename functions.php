@@ -72,7 +72,7 @@ function ecovila_register_blog()
       'public' => true,
       'has_archive' => false,
       'menu_icon' => 'dashicons-align-left',
-      'supports' => array('title', 'page-attributes', 'author', 'thumbnail', 'editor'),
+      'supports' => array('title', 'page-attributes', 'author', 'thumbnail', 'editor', 'excerpt'),
       'taxonomies' => array('category', 'post_tag'),
       'show_in_rest' => true,
     )

@@ -6,7 +6,7 @@
   $url = get_the_post_thumbnail_url(null, 'post-thumbnail');
   ?>
 
-  <div class="cover" style="background-image: url(<?= $url ?>);">
+  <div class="section-cover" style="background-image: url(<?= $url ?>);">
     <div class="overlay">
       <?php the_title('<h1>', '</h1>'); ?>
     </div>
