@@ -50,6 +50,34 @@
       </div>
     </section>
 
+    <section class="section-differentials">
+      <h2> Nossos diferenciais</h2>
+      <div class="divider"></div>
+
+      <div class="content">
+        <?php if (get_field('diferencial_1') != null) : ?>
+          <article>
+            <?= the_field('diferencial_1') ?>
+          </article>
+        <?php endif; ?>
+        <?php if (get_field('diferencial_2') != null) : ?>
+          <article>
+            <?= the_field('diferencial_2') ?>
+          </article>
+        <?php endif; ?>
+        <?php if (get_field('diferencial_3') != null) : ?>
+          <article>
+            <?= the_field('diferencial_3') ?>
+          </article>
+        <?php endif; ?>
+        <?php if (get_field('diferencial_4') != null) : ?>
+          <article>
+            <?= the_field('diferencial_4') ?>
+          </article>
+        <?php endif; ?>
+      </div>
+    </section>
+
     <?php require_once 'components/sliders/casas.php'; ?>
 
     <?php require_once 'components/sliders/servicos.php'; ?>
