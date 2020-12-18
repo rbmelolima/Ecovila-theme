@@ -12,7 +12,7 @@
   h4,
   h5,
   h6 {
-    @include title(32px, var(--cor-azul-escuro));
+    @include title(2rem, var(--cor-azul-escuro));
     margin: 24px 0;
     text-align: left;
   }
@@ -31,6 +31,18 @@
     }
   }
 
+  li {
+    list-style: disc;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  img {
+    max-width: $max-width-content;
+    width: 100%;
+    margin: 0.8rem 0;
+  }
+
   footer {
     display: flex;
     align-items: center;
@@ -39,6 +51,13 @@
   }
 
   footer p {
+    margin: 0;
+  }
+
+  footer img {
+    max-width: none;
+    width: auto;
+    height: auto;
     margin: 0;
   }
 

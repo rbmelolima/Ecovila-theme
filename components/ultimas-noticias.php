@@ -1,4 +1,4 @@
-<section class="news">
+<section class="section-news">
   <h2>Notícias, novidades e dicas sobre um condomínio que tem muito a oferecer!</h2>
   <div class="divider"></div>
   <div class="news-container">

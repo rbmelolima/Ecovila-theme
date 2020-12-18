@@ -1,4 +1,4 @@
-section.cta {
+.section-cta {
   @include padding();
 
   display: flex;
@@ -8,7 +8,7 @@ section.cta {
   padding-top: 200px !important;
 }
 
-section.cta .image-cta {
+.section-cta .image-cta {
   @include backgroundCover();
   width: 100%;
   max-width: $max-width-content;
@@ -18,7 +18,7 @@ section.cta .image-cta {
   margin: 0 auto;
 }
 
-section.cta .primary-box {
+.section-cta .primary-box {
   border: 8px solid var(--cor-verde-escuro);
   background-color: transparent;
   padding: 16px;
@@ -30,15 +30,15 @@ section.cta .primary-box {
 }
 
 @media screen and (min-width: 1224px) {
-  section.cta  {
+  .section-cta  {
     padding-top: unset;
   }
 
-  section.cta .image-cta {
+  .section-cta .image-cta {
     height: 600px;    
   }
 
-  section.cta .primary-box {
+  .section-cta .primary-box {
     width: 500px;
     position: absolute;
     top: 50%;
@@ -48,7 +48,7 @@ section.cta .primary-box {
   }
 }
 
-section.cta .second-box {
+.section-cta .second-box {
   width: 100%;
   min-height: 400px;
   padding: 28px;
