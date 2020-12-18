@@ -30,7 +30,7 @@
     </div>
 
     <div class="submenu">
-      <button onclick="active_submenu_with_click('submenu-content-tags')">Tags <i class="fas fa-long-arrow-alt-down"></i></button>
+      <button onclick="active_submenu_with_click('submenu-content-tags')">Tópicos <i class="fas fa-long-arrow-alt-down"></i></button>
       <div class="submenu-content" id="submenu-content-tags">
         <?php
         $tags = get_tags();
@@ -42,6 +42,46 @@
       </div>
     </div>
   </div>
+
+  <section class="blog-notices-container">
+    <div class="blog-notices-container-wrapper">
+      <?php
+      //Base para filtros
+      $category = isset($_GET['categoria']) ? $_GET['categoria'] : '';
+      $tag = isset($_GET['topico']) ? $_GET['topico'] : '';
+      $author = isset($_GET['autor']) ? $_GET['autor'] : '';
+
+      //$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+      //'paged' => $paged
+
+      $loop = new WP_Query(array(
+        'post_type' => 'blog',
+        'category_name' => $category,
+        'author_name' => $author,
+        'tag' => $tag,
+        'posts_per_page' => -1,
+        'post_status' => 'publish',
+        'orderby' => 'date',
+      ));
+
+      if (have_posts()) : while ($loop->have_posts()) : $loop->the_post(); ?>
+          <article class="cardNotice">
+            <div class="thumbnail" style="background-image: url(<?= get_the_post_thumbnail_url(null, 'post-thumbnail'); ?>);">
+            </div>
+            <div class="content">
+              <?php the_category(); ?>
+              <span>Publicado em <?php the_date(); ?></span>
+              <a href="<?= the_permalink() ?>" class="link_to_post">
+                <?php the_title('<h5>', '</h5>'); ?>
+                <?php the_excerpt() ?>
+              </a>
+            </div>
+          </article>
+
+        <?php endwhile; ?>
+      <?php endif; ?>
+    </div>
+  </section>
 </body>
 
 <?php require_once 'components/footer.php'; ?>
