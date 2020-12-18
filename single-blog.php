@@ -40,7 +40,7 @@ function getUrl()
       </aside>
 
       <div class="share">
-        <a href="" title="Voltar"><i class="fas fa-long-arrow-alt-left"></i></a>
+        <a href="javascript:history.back()" title="Voltar"><i class="fas fa-long-arrow-alt-left"></i></a>
 
         <a href="https://www.facebook.com/sharer/sharer.php?u=<?= getUrl(); ?>" target="_blank" title="Compartilhar via Facebook" class="facebook-link">
           <i class="fab fa-facebook-f"></i>
