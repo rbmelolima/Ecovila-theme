@@ -27,7 +27,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: $breakpoint-tablet) {
   .cardNotice {
     flex-direction: row;
   }
@@ -46,6 +46,7 @@
     max-height: 550px;
   }
 }
+
 .cardNotice .content a {
   text-decoration: none;
   color: unset;

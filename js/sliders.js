@@ -62,22 +62,30 @@ const SwiperBrands = new Swiper('.swiper-container-brands .swiper-container', {
   direction: 'horizontal',
   grabCursor: true,
   loop: true,
+  autoplay: {
+    delay: 7000,
+    disableOnInteraction: true,
+  },
   breakpoints: {
     1: {
+      slidesPerView: 1,
+      spaceBetween: 32,
+    },
+    420: {
       slidesPerView: 2,
-      spaceBetween: 40,
+      spaceBetween: 32,
     },
     780: {
       slidesPerView: 3,
-      spaceBetween: 32,
+      spaceBetween: 40,
     },
     1024: {
       slidesPerView: 4,
-      spaceBetween: 40,
-    },
-    1200: {
-      slidesPerView: 5,
       spaceBetween: 48,
+    },
+    1224: {
+      slidesPerView: 5,
+      spaceBetween: 56,
     },
   }
 });

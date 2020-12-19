@@ -161,13 +161,11 @@ function ecovila_register_partners()
   );
 }
 
-
 // Customizar o Footer do WordPress
 function ecovila_custom_footer_admin()
 {
   echo 'Criado por <a href="https://jtpsolution.com.br/">JTP Solution</a>';
 }
-
 
 // Customizando classe do the_custom_post()
 function ecovila_change_logo_class($html)
@@ -183,6 +181,16 @@ function ecovila_remove_menu_pages()
   remove_menu_page('edit-comments.php');          //Comments 
 };
 
+/**
+ * Filter the except length to 20 words.
+ *
+ * @param int $length Excerpt length.
+ * @return int (Maybe) modified excerpt length.
+ */
+function wpdocs_custom_excerpt_length($length)
+{
+  return 30;
+}
 
 //Registrando as funções
 add_action('init', 'ecovila_register_service');
@@ -199,5 +207,6 @@ add_filter('admin_footer_text', 'ecovila_custom_footer_admin');
 add_filter('get_custom_logo', 'ecovila_change_logo_class');
 add_action('admin_menu', 'ecovila_remove_menu_pages');
 
+add_filter('excerpt_length', 'wpdocs_custom_excerpt_length', 999);
 
 //ADVANCED CUSTOM FIELDS --------------------------------->

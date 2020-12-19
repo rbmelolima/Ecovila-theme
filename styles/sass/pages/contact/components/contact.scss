@@ -1,16 +1,16 @@
 $breakpoint-form: $breakpoint-tablet + 60px;
 
 #page-contact .form-contact {
-  padding: 0 1rem;
   width: 100%;
-  margin-bottom: 120px;
+
+  padding: $padding-section-mobile;
 
   @media screen and (min-width: $breakpoint-notebook) {
-    padding: 0 32px;
+    padding: $padding-section-notebook;
   }
 
   @media screen and (min-width: $breakpoint-desktop) {
-    padding: 0 64px;
+    padding: $padding-section-desktop;
   }
 
   h2 {
