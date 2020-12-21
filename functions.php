@@ -177,19 +177,60 @@ function ecovila_change_logo_class($html)
 // Limpando o painel administrativo
 function ecovila_remove_menu_pages()
 {
-  remove_menu_page('edit.php');                   //Posts
-  remove_menu_page('edit-comments.php');          //Comments 
+  remove_menu_page('edit.php'); //Posts
+  remove_menu_page('edit-comments.php'); //Comments 
 };
 
-/**
- * Filter the except length to 20 words.
- *
- * @param int $length Excerpt length.
- * @return int (Maybe) modified excerpt length.
- */
-function wpdocs_custom_excerpt_length($length)
+//Alterando o tamanho do excerpt do post em caracteres
+function ecovila_wpdocs_custom_excerpt_length($length)
 {
   return 30;
+}
+
+//Função que permite paginação de custom posts
+function ecovila_pagination($query)
+{
+  //Se tiver apenas 1 pagina de resultados, nao imprimir
+  if ($query->max_num_pages < 2) {
+    return;
+  }
+
+  $paged        = get_query_var('paged') ? intval(get_query_var('paged')) : 1;
+  $pagenum_link = html_entity_decode(get_pagenum_link());
+  $query_args   = array();
+  $url_parts    = explode('?', $pagenum_link);
+
+  if (isset($url_parts[1])) {
+    wp_parse_str($url_parts[1], $query_args);
+  }
+
+  $pagenum_link = remove_query_arg(array_keys($query_args), $pagenum_link);
+  $pagenum_link = trailingslashit($pagenum_link) . '%_%';
+
+  $format  = $GLOBALS['wp_rewrite']->using_index_permalinks() && !strpos($pagenum_link, 'index.php') ? 'index.php/' : '';
+  $format .= $GLOBALS['wp_rewrite']->using_permalinks() ? user_trailingslashit('page/%#%', 'paged') : '?paged=%#%';
+
+  // Criar os links.
+  $links = paginate_links(array(
+    'base'     => $pagenum_link,
+    'format'   => $format,
+    'total'    => $query->max_num_pages,
+    'current'  => $paged,
+    'mid_size' => 3,
+    'add_args' => array_map('urlencode', $query_args),
+    'prev_text' => __('<i class="fas fa-long-arrow-alt-left"></i>'),
+    'next_text' => __('<i class="fas fa-long-arrow-alt-right"></i>'),
+    'type'      => 'list',
+  ));
+
+  $paginador = "";
+  if ($links) :
+    $paginador .= '<nav class="pagination" aria-label="Navegação de página">';
+    $paginador .= $links;
+    $paginador .= '</nav>';
+  endif;
+
+  return $paginador;
 }
 
 //Registrando as funções
@@ -202,11 +243,11 @@ add_action('init', 'ecovila_register_information');
 add_action('init', 'ecovila_register_partners');
 add_action('init', 'ecovila_register_blog');
 add_action('init', 'ecovila_register_house');
-
+add_action('init', 'ecovila_register_house');
+add_action('init', 'ecovila_pagination');
 add_filter('admin_footer_text', 'ecovila_custom_footer_admin');
 add_filter('get_custom_logo', 'ecovila_change_logo_class');
 add_action('admin_menu', 'ecovila_remove_menu_pages');
-
-add_filter('excerpt_length', 'wpdocs_custom_excerpt_length', 999);
+add_filter('excerpt_length', 'ecovila_wpdocs_custom_excerpt_length', 999);
 
 //ADVANCED CUSTOM FIELDS --------------------------------->

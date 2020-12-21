@@ -51,17 +51,17 @@
       $tag = isset($_GET['topico']) ? $_GET['topico'] : '';
       $author = isset($_GET['autor']) ? $_GET['autor'] : '';
 
-      //$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-      //'paged' => $paged
+      $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
       $loop = new WP_Query(array(
         'post_type' => 'blog',
         'category_name' => $category,
         'author_name' => $author,
         'tag' => $tag,
-        'posts_per_page' => -1,
+        'posts_per_page' => 2,
         'post_status' => 'publish',
         'orderby' => 'date',
+        'paged' => $paged
       ));
 
       if (have_posts()) : while ($loop->have_posts()) : $loop->the_post(); ?>
@@ -82,6 +82,10 @@
       <?php endif; ?>
     </div>
   </section>
+  <section class="pagination-container">
+    <?php echo ecovila_pagination($loop); ?>
+  </section>
+  <?php wp_reset_query(); ?>
 </body>
 
 <?php require_once 'components/footer.php'; ?>
