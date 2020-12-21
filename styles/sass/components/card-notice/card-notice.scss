@@ -13,6 +13,22 @@
   height: 350px;
 }
 
+.cardNotice::after {
+  width: 100%;
+  max-width: calc(#{$max-width-content} - 400px);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all ease-in-out 0.4s;
+  content: "";
+}
+
+.cardNotice:hover::after,
+.cardNotice:active::after {
+  background-color: rgba($color: #004358, $alpha: 0.5);
+}
+
 .cardNotice .content {
   @include shadow(0.625rem);
   background-color: #fff;

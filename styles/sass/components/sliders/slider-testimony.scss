@@ -86,12 +86,15 @@
     margin-bottom: 1rem;
   }
 
-  a {
-    margin-top: 1rem;
+  a,
+  p a {
+    margin-top: 1.2rem;
     text-decoration: none;
     font-size: 1rem;
     font-weight: 600;
     color: #1f8a70;
+    width: 100%;
+    display: block;
   }
 
   p {

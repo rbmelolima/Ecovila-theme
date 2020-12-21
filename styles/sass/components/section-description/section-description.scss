@@ -3,7 +3,7 @@
   max-width: $max-width-content;
   margin: 0 auto;
   column-gap: 2rem;
-  
+
   h1 {
     @include title();
   }
@@ -44,10 +44,10 @@
     border: 2px solid var(--cor-verde-claro);
     margin: 2.5rem auto 0 auto;
 
-    i {
-      margin-left: 0.5rem;
+    &::after {
+      @include longArrow();
     }
-  }  
+  }
 }
 
 .section-description .iframe-container {

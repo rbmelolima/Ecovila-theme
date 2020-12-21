@@ -65,6 +65,11 @@
 
 #page-blog .blog-notices-container-wrapper .cardNotice:nth-child(even) {
   @media screen and (min-width: 768px) {
+    &::after {
+      left: unset;
+      right: 0;
+    }
+
     .thumbnail {
       margin-left: auto;
     }

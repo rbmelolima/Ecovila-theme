@@ -12,12 +12,12 @@
 #page-about .ctas a {
   @include linkDefaultStyle();
 
+  &::after {
+    @include longArrow();
+  }
+
   font-weight: bold;
   border: 1px solid transparent;
-
-  i {
-    margin-left: 24px;
-  }
 
   @media screen and (max-width: $breakpoint-notebook) {
     width: 100%;

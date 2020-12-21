@@ -58,3 +58,16 @@
   color: #212121;
   word-wrap: break-word;
 }
+
+@mixin longArrow() {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  margin-left: 1rem;
+
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f30b";
+}

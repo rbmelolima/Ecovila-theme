@@ -74,8 +74,8 @@
     background-color: transparent;
     color: #ffffff;
   }
-
-  i {
-    margin-left: 0.5rem;
+  
+  &::after {
+    @include longArrow();
   }
 }
