@@ -8,51 +8,46 @@
   grid-template-columns: 1fr 1fr 1fr;
   gap: 0.5rem;
   border-bottom: 1px solid #e6e6e6;
+  position: relative;
 
   @media screen and (min-width: 425px) {
     padding: 0.5rem 1rem;
   }
-}
 
-#menu-container > div {
-  justify-self: center;
-}
-
-#menu-container a {
-  color: var(--cor-verde-claro);
-}
-
-#menu-container a:hover {
-  color: var(--cor-verde-escuro);
-}
-
-#menu-container .header-logo-link img {
-  height: 4rem;
-  width: auto;
-}
-
-#menu-container .social-links {
-  width: 72px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  i::before {
-    transition: all 0.4s ease-in-out;
+  & > div {
+    justify-self: center;
   }
-}
 
-#menu-container .social-links a {
-  &:enabled {
+  a {
+    color: var(--cor-verde-claro);
+  }
+
+  a:hover {
+    color: var(--cor-verde-escuro);
+  }
+
+  .header-logo-link img {
+    height: 4rem;
+    width: auto;
+  }
+
+  .social-links {
+    width: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
     i::before {
-      color: var(--cor-verde-claro);
+      transition: all 0.4s ease-in-out;
     }
   }
 
-  &:hover {
-    i::before {
-      color: var(--cor-verde-escuro);
-    }
+  .social-links a:enabled i::before {
+    color: var(--cor-verde-claro);
+  }
+
+  .social-links a:hover i::before {
+    color: var(--cor-verde-escuro);
   }
 }
 
@@ -63,7 +58,6 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 10;
 
   i::before {
     color: var(--cor-verde-claro);
@@ -75,16 +69,28 @@
   background-color: #fff;
   display: none;
   position: fixed;
-  top: 0;
+  top: 100px;
   left: 0;
-  z-index: 9;
+  z-index: 10;
   width: 100%;
-  height: 150vh;
+  height: 100%;
 
   &.open {
-    display: flex;
-    justify-content: center;
-    overflow-y: scroll !important;
+    display: block;
+  }
+
+  & > div {
+    overflow-y: scroll;
+    height: 100%;
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  & > div::-webkit-scrollbar {
+    display: none;
   }
 
   ul {
@@ -114,7 +120,7 @@
 
   .sub-menu.show {
     display: block;
-    margin: 2.5rem 0;
+    margin: 2rem 0;
   }
 
   .sub-menu li {
