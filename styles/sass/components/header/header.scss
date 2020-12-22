@@ -58,6 +58,8 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  outline: none;
+  background-color: transparent;
 
   i::before {
     color: var(--cor-verde-claro);
@@ -97,9 +99,9 @@
     scrollbar-width: none; /* Firefox */
   }
 
-  /*   & > div::-webkit-scrollbar {
+  & > div::-webkit-scrollbar {
     display: none;
-  } */
+  }
 
   ul {
     list-style: none;

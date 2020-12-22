@@ -3,7 +3,9 @@
   max-width: $max-width-content;
   margin: 0 auto;
   column-gap: 2rem;
+}
 
+.section-description {
   h1 {
     @include title();
   }
@@ -34,7 +36,6 @@
 
   a {
     @include linkDefaultStyle();
-
     background-color: transparent;
     font-size: 1rem;
     color: var(--cor-azul-escuro);
@@ -62,5 +63,17 @@
 
   @media screen and (min-width: 750px) {
     height: 700px !important;
+  }
+}
+
+.section-description .wp-block-columns .wp-block-column {
+  @media screen and (min-width: $breakpoint-notebook) {
+    column-count: 2;
+  }
+}
+
+.section-description div div:last-child {
+  @media screen and (min-width: $breakpoint-notebook) {
+    column-count: 2;
   }
 }
