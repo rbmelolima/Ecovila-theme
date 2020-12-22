@@ -32,7 +32,7 @@
 2. Vá até configurações
   - Entre em links permanentes
   - Clique em estrutura personalizada
-  - No input, digite: /%postname%/
+  - No input, digite: /%category%/%postname%/
   - No campo "Base das categorias", digite "categorias"
   - No campo "Base das tags", digite "topicos"
   - Salve as alterações

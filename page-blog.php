@@ -58,7 +58,6 @@
         'category_name' => $category,
         'author_name' => $author,
         'tag' => $tag,
-        'posts_per_page' => 2,
         'post_status' => 'publish',
         'orderby' => 'date',
         'paged' => $paged
@@ -66,7 +65,8 @@
 
       if (have_posts()) : while ($loop->have_posts()) : $loop->the_post(); ?>
           <article class="cardNotice">
-            <div class="thumbnail" style="background-image: url(<?= get_the_post_thumbnail_url(null, 'post-thumbnail'); ?>);"></div>
+            <div class="thumbnail" style="background-image: url(<?= get_the_post_thumbnail_url(null, 'post-thumbnail'); ?>);">
+            </div>
             <div class="content">
               <?php the_category(); ?>
               <span>Publicado em <?php the_date(); ?></span>
@@ -83,6 +83,7 @@
   </section>
   <section class="pagination-container">
     <?php echo ecovila_pagination($loop); ?>
+
   </section>
   <?php wp_reset_query(); ?>
 </body>

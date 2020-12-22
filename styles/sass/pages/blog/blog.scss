@@ -84,3 +84,48 @@
     }
   }
 }
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination-container .pagination ul {
+  display: flex;
+  width: 100%;
+}
+
+.pagination-container .pagination a,
+.pagination-container .pagination span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+  background-color: var(--cor-verde-claro);
+  color: var(--cor-verde-escuro);
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 0;
+}
+
+.pagination-container .pagination .current {
+  background-color: var(--cor-verde-escuro);
+  color: var(--cor-verde-claro);
+}
+
+.pagination-container .pagination li:nth-child(even) {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.pagination-container .pagination .next,
+.pagination-container .pagination .prev {
+  background-color: var(--cor-azul-escuro);
+  color: #fff;
+
+  i {
+    font-size: 12px;
+  }
+}

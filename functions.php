@@ -208,7 +208,7 @@ function ecovila_pagination($query)
   $pagenum_link = trailingslashit($pagenum_link) . '%_%';
 
   $format  = $GLOBALS['wp_rewrite']->using_index_permalinks() && !strpos($pagenum_link, 'index.php') ? 'index.php/' : '';
-  $format .= $GLOBALS['wp_rewrite']->using_permalinks() ? user_trailingslashit('page/%#%', 'paged') : '?paged=%#%';
+  $format .= $GLOBALS['wp_rewrite']->using_permalinks() ? user_trailingslashit('?paged=%#%', 'paged') : 'page/%#%';
 
   // Criar os links.
   $links = paginate_links(array(
@@ -250,4 +250,13 @@ add_filter('get_custom_logo', 'ecovila_change_logo_class');
 add_action('admin_menu', 'ecovila_remove_menu_pages');
 add_filter('excerpt_length', 'ecovila_wpdocs_custom_excerpt_length', 999);
 
-//ADVANCED CUSTOM FIELDS --------------------------------->
+
+function remove_page_from_query_string($query_string)
+{
+  if ($query_string['name'] == 'page' && isset($query_string['page'])) {
+    unset($query_string['name']);
+    $query_string['paged'] = $query_string['page'];
+  }
+  return $query_string;
+}
+add_filter('request', 'remove_page_from_query_string');
