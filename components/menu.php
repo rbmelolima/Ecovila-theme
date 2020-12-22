@@ -1,6 +1,8 @@
-<nav id="menu-container">
-  <div id="menu-button-toggle" onclick="toggleMenu()">
-    <i class="fas fa-bars" id="menu-button-icon"></i>
+<nav id="menu-container"> 
+  <div id="menu-button-toggle" class="button_container" onclick="toggleMenu()">
+    <span class="top"></span>
+    <span class="middle"></span>
+    <span class="bottom"></span>
   </div>
 
   <div>

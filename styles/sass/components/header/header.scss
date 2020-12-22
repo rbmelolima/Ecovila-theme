@@ -52,17 +52,33 @@
 }
 
 #menu-button-toggle {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 1.5rem;
+  height: 1rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   cursor: pointer;
   outline: none;
   background-color: transparent;
 
-  i::before {
-    color: var(--cor-verde-claro);
+  &.active {
+    .top {
+      transform: translateY(0.45rem) translateX(0) rotate(45deg);
+    }
+    .middle {
+      opacity: 0;
+    }
+    .bottom {
+      transform: translateY(-0.45rem) translateX(0) rotate(-45deg);
+    }
+  }
+
+  span {
+    background-color: var(--cor-verde-claro);
+    border: none;
+    height: 2px;
+    width: 100%;
+    transition: all 0.35s ease;
   }
 }
 

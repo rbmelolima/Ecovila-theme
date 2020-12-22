@@ -1,17 +1,9 @@
 function toggleMenu() {
   const menuOverlay = document.getElementById("menu-container-overlay");
-  const menuIcon = document.getElementById("menu-button-icon");
+  const menuButton = document.getElementById("menu-button-toggle");
+
   menuOverlay.classList.toggle("open");
-
-  if(menuIcon.classList.contains('fa-bars')) {
-    menuIcon.classList.remove('fa-bars');
-    menuIcon.classList.add('fa-times');
-  }
-
-  else {
-    menuIcon.classList.remove('fa-times');
-    menuIcon.classList.add('fa-bars');
-  }
+  menuButton.classList.toggle("active");
 
   document.querySelector("body").classList.toggle('no-scroll');
 }
