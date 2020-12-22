@@ -233,6 +233,15 @@ function ecovila_pagination($query)
   return $paginador;
 }
 
+function remove_page_from_query_string($query_string)
+{
+  if ($query_string['name'] == 'page' && isset($query_string['page'])) {
+    unset($query_string['name']);
+    $query_string['paged'] = $query_string['page'];
+  }
+  return $query_string;
+}
+
 //Registrando as funções
 add_action('init', 'ecovila_register_service');
 add_action('init', 'ecovila_add_resources');
@@ -249,14 +258,4 @@ add_filter('admin_footer_text', 'ecovila_custom_footer_admin');
 add_filter('get_custom_logo', 'ecovila_change_logo_class');
 add_action('admin_menu', 'ecovila_remove_menu_pages');
 add_filter('excerpt_length', 'ecovila_wpdocs_custom_excerpt_length', 999);
-
-
-function remove_page_from_query_string($query_string)
-{
-  if ($query_string['name'] == 'page' && isset($query_string['page'])) {
-    unset($query_string['name']);
-    $query_string['paged'] = $query_string['page'];
-  }
-  return $query_string;
-}
 add_filter('request', 'remove_page_from_query_string');

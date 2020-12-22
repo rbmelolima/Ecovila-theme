@@ -17,7 +17,7 @@
 
       <?php if (get_field('cod_video') != null) : ?>
         <div class="iframe-container">
-          <iframe src="<?= the_field('cod_video') ?>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <?= the_field('cod_video') ?>
         </div>
       <?php endif; ?>
     </section>
@@ -36,12 +36,9 @@
             $images = acf_photo_gallery('galeria_de_fotos', get_the_ID());
             foreach ($images as $image) :
             ?>
-
               <div class="swiper-slide" style="background-image: url(<?= $image['full_image_url'] ?>);">
               </div>
-
             <?php endforeach; ?>
-
           </div>
           <!-- navigation buttons -->
           <div class="swiper-button-prev"><i class="fas fa-long-arrow-alt-left"></i></div>
