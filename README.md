@@ -43,6 +43,16 @@ Este é o guia de instalação e uso do tema da Ecovila.
 ## :trophy: Populando o site
 Todos os procedimentos a seguir são feitos no painel administrativo.
 
+### Início
+Crie o texto que será exibido na página inicial. Aquele famoso "sobre a empresa".
+
+Estrutura: 
+1. Título (h1)
+2. Subtítulo (h2)
+3. Separador (hr).
+4. Conteúdo normal (p)
+*Caso queira colocar links, coloque no fim do conteúdo, sozinho, pois o mesmo ficará centralizado na tela.*
+
 ### Banner
 O banner é a imagem de destaque da página inicial. Cadastre cada slide individualmente, podendo colocar uma foto de fundo, títulos, paragráfos e links.
 
