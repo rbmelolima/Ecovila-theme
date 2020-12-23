@@ -47,49 +47,53 @@
       </div>
     </section>
 
-    <section class="section-differentials">
-      <h2> Nossos diferenciais</h2>
-      <div class="divider"></div>
+    <?php if (get_field('diferencial_1') != null) : ?>
+      <section class="section-differentials">
+        <h2> Nossos diferenciais</h2>
+        <div class="divider"></div>
 
-      <div class="content">
-        <?php if (get_field('diferencial_1') != null) : ?>
-          <article>
-            <?= the_field('diferencial_1') ?>
-          </article>
-        <?php endif; ?>
-        <?php if (get_field('diferencial_2') != null) : ?>
-          <article>
-            <?= the_field('diferencial_2') ?>
-          </article>
-        <?php endif; ?>
-        <?php if (get_field('diferencial_3') != null) : ?>
-          <article>
-            <?= the_field('diferencial_3') ?>
-          </article>
-        <?php endif; ?>
-        <?php if (get_field('diferencial_4') != null) : ?>
-          <article>
-            <?= the_field('diferencial_4') ?>
-          </article>
-        <?php endif; ?>
-      </div>
-    </section>
+        <div class="content">
+          <?php if (get_field('diferencial_1') != null) : ?>
+            <article>
+              <?= the_field('diferencial_1') ?>
+            </article>
+          <?php endif; ?>
+          <?php if (get_field('diferencial_2') != null) : ?>
+            <article>
+              <?= the_field('diferencial_2') ?>
+            </article>
+          <?php endif; ?>
+          <?php if (get_field('diferencial_3') != null) : ?>
+            <article>
+              <?= the_field('diferencial_3') ?>
+            </article>
+          <?php endif; ?>
+          <?php if (get_field('diferencial_4') != null) : ?>
+            <article>
+              <?= the_field('diferencial_4') ?>
+            </article>
+          <?php endif; ?>
+        </div>
+      </section>
+    <?php endif; ?>
 
     <?php require_once 'components/sliders/casas.php'; ?>
 
     <?php require_once 'components/sliders/servicos.php'; ?>
 
-    <section class="section-cta">
-      <div class="image-cta" style="background-image: url(<?= the_field('img_cta'); ?>);">
-        <div class="primary-box">
-          <div class="second-box">
-            <?= the_field('conteudo_cta'); ?>
+    <?php if (get_field('conteudo_cta') != null) : ?>
+      <section class="section-cta">
+        <div class="image-cta" style="background-image: url(<?= the_field('img_cta'); ?>);">
+          <div class="primary-box">
+            <div class="second-box">
+              <?= the_field('conteudo_cta'); ?>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    <?php endif; ?>
 
+  </main>
 </body>
 
 <?php require_once 'components/footer.php'; ?>

@@ -71,9 +71,3 @@
     column-count: 2;
   }
 }
-
-.section-description div div:last-child {
-  @media screen and (min-width: $breakpoint-notebook) {
-    column-count: 2;
-  }
-}
