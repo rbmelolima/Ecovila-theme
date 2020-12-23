@@ -19,9 +19,9 @@ Este é o guia de instalação e uso do tema da Ecovila.
 O CSS foi feito a partir do SASS. 
 
 0. Certifique-se se possuir o node e o npm instalado na sua máquina
-1. Para compilar o SASS, deve-se instalar todas as dependências de desevolvimento com yarn ou npm
-2. Digitar "gulp" no terminal
-4. Editar livremente os arquivos SASS
+1. Para compilar o SASS, instale todas as dependências de desevolvimento com yarn ou npm
+2. Digite "gulp" no terminal
+4. Edite livremente os arquivos SASS
 
 #### :house_with_garden: Empresa
 1.  Configure nome, descrição e logo
